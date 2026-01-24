@@ -174,14 +174,18 @@ a:hover{ text-decoration: underline; }
 }
 
 .avatarHero{
-  width: 208px;           /* ~2" feel */
-  height: 208px;
-  border-radius: 999px;   /* circle like LinkedIn/Facebook */
+  width: 132px;          /* LinkedIn-style */
+  height: 132px;
+  max-width: 132px;
+  max-height: 132px;
+  border-radius: 999px;
   object-fit: cover;
-  border: 2px solid rgba(19,24,39,.12);
-  box-shadow: 0 20px 34px rgba(19,24,39,.14);
-  background: rgba(251,248,240,.6);
+  display: block;
+  flex-shrink: 0;
+  border: 2px solid rgba(251,248,240,.95);
+  box-shadow: 0 14px 26px rgba(19,24,39,.12);
 }
+
 
 .heroCenter__name{
   font-weight: 950;
@@ -487,3 +491,7 @@ a:hover{ text-decoration: underline; }
 @media (max-width: 720px){
   .nav{ display:none; }
 }
+@media (max-width: 1020px){
+  .avatarHero{ width: 116px; height: 116px; max-width: 116px; max-height: 116px; }
+}
+
