@@ -1,3 +1,4 @@
+/* assets/style.css */
 :root{
   /* Soft, tinted canvas (no pure white) */
   --bg:  #e5ddcf;   /* linen */
@@ -166,13 +167,54 @@ a:hover{ text-decoration: underline; }
 }
 
 /* Hero */
-.hero{ padding: 52px 0 18px; }
+.hero{ padding: 32px 0 18px; }
+
+.heroCenter{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap: 10px;
+  padding: 18px 16px;
+  margin: 10px auto 18px;
+  border-radius: 26px;
+  border: 1px solid rgba(19,24,39,.12);
+  background: rgba(251,248,240,.58);
+  box-shadow: 0 14px 26px rgba(19,24,39,.08);
+  max-width: 920px;
+}
+
+.avatarHero{
+  width: 172px;
+  height: 172px;
+  border-radius: 34px;
+  object-fit: cover;
+  border: 1px solid rgba(19,24,39,.14);
+  box-shadow: 0 20px 34px rgba(19,24,39,.14);
+}
+
+.heroCenter__name{
+  font-weight: 950;
+  letter-spacing: -0.4px;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.heroCenter__sub{
+  color: rgba(19,24,39,.72);
+  font-size: 14px;
+  max-width: 70ch;
+}
+
+.heroCenter__chips{ justify-content:center; }
+
 .hero__grid{
   display:grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 16px;
   align-items:start;
 }
+
 .hero__cta{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0 10px; }
 
 .chips{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 12px; }
@@ -333,7 +375,7 @@ a:hover{ text-decoration: underline; }
   background: rgba(251,248,240,.78);
 }
 
-/* Projects: card style + "View Details →" feel like the reference */
+/* Projects */
 .projgrid{
   display:grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -479,55 +521,10 @@ a:hover{ text-decoration: underline; }
   .contactgrid{ flex-direction: column; }
   .contactbtns{ justify-content:flex-start; }
   .h1{ font-size: 34px; }
+  .avatarHero{ width: 150px; height: 150px; border-radius: 30px; }
+  .heroCenter{ max-width: 100%; }
 }
+
 @media (max-width: 720px){
   .nav{ display:none; }
-}
-/* Prominent hero avatar */
-.avatarRow{
-  display:flex;
-  align-items:center;
-  gap: 16px;
-  margin: 14px 0 14px;
-  padding: 14px 14px;
-  border-radius: 22px;
-  border: 1px solid rgba(19,24,39,.12);
-  background: rgba(251,248,240,.62);
-  box-shadow: 0 10px 18px rgba(19,24,39,.06);
-}
-
-.avatar{
-  width: 112px;          /* was tiny; now noticeable */
-  height: 112px;
-  border-radius: 24px;   /* modern rounded-square */
-  object-fit: cover;
-  border: 1px solid rgba(19,24,39,.14);
-  box-shadow: 0 16px 26px rgba(19,24,39,.10);
-}
-
-.avatarMeta{
-  display:flex;
-  flex-direction:column;
-  gap: 6px;
-}
-
-.avatarName{
-  font-weight: 950;
-  letter-spacing: -0.3px;
-  font-size: 18px;
-  line-height: 1.15;
-}
-
-.avatarSub{
-  font-size: 14px;
-  color: rgba(19,24,39,.72);
-}
-
-/* Optional: make the hero right card feel like an "intro card" */
-.hero__right.card{
-  position: relative;
-}
-
-@media (max-width: 1020px){
-  .avatar{ width: 96px; height: 96px; border-radius: 22px; }
 }
