@@ -1,6 +1,8 @@
 :root{
-  --bg: #f7f8ff;
-  --bg2:#ffffff;
+  /* warmer off-white paper */
+  --bg: #fbf7ef;
+  --bg2:#f6fbff;
+
   --text:#141826;
   --muted: rgba(20,24,38,.70);
   --muted2: rgba(20,24,38,.55);
@@ -11,15 +13,17 @@
   --shadow: 0 14px 34px rgba(20,24,38,.10);
   --shadow2: 0 10px 20px rgba(20,24,38,.08);
 
-  --sky:#6aa9ff;
-  --mint:#3dd9b6;
-  --lav:#a98bff;
-  --coral:#ff7a90;
-  --sun:#ffcf5a;
+  /* slightly brighter accents */
+  --sky:#5fa3ff;
+  --mint:#2fd8b3;
+  --lav:#a48cff;
+  --coral:#ff6f88;
+  --sun:#ffd36a;
 
   --radius: 20px;
   --max: 1160px;
 }
+
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
@@ -103,7 +107,7 @@ a:hover{ text-decoration: underline; }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(247,248,255,.70);
+  background: rgba(251,247,239,.78);
   border-bottom: 1px solid rgba(20,24,38,.08);
 }
 .topbar__inner{
@@ -386,6 +390,41 @@ a:hover{ text-decoration: underline; }
 .k5{ outline: 2px solid rgba(255,122,144,.14); }
 .k6{ outline: 2px solid rgba(106,169,255,.12); }
 
+/* Project header right-side buttons (Repo / Details) */
+.pcard__left{ display:flex; flex-direction:column; gap:2px; }
+
+.pcard__right{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pbtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20,24,38,.12);
+  background: rgba(255,255,255,.78);
+  color: var(--text);
+  font-size: 13px;
+  box-shadow: 0 8px 14px rgba(20,24,38,.06);
+  cursor: pointer;
+}
+
+.pbtn:hover{ transform: translateY(-1px); text-decoration:none; }
+
+.pbtn--repo{
+  background: linear-gradient(135deg, rgba(95,163,255,.22), rgba(47,216,179,.18));
+}
+
+.pbtn--ghost{
+  background: rgba(255,255,255,.66);
+}
+
+
 /* Contact */
 .contactgrid{
   display:flex;
@@ -404,6 +443,38 @@ a:hover{ text-decoration: underline; }
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px solid rgba(20,24,38,.08);
+}
+.pcard__left{ display:flex; flex-direction:column; gap:2px; }
+
+.pcard__right{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pbtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20,24,38,.12);
+  background: rgba(255,255,255,.78);
+  color: var(--text);
+  font-size: 13px;
+  box-shadow: 0 8px 14px rgba(20,24,38,.06);
+  cursor: pointer;
+}
+
+.pbtn:hover{ transform: translateY(-1px); text-decoration:none; }
+
+.pbtn--repo{
+  background: linear-gradient(135deg, rgba(95,163,255,.22), rgba(47,216,179,.18));
+}
+
+.pbtn--ghost{
+  background: rgba(255,255,255,.66);
 }
 
 /* Notes */
