@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhinita Sanabada | Data Engineering • MLOps • Data Science</title>
-  <meta name="description" content="M.S. Data Science candidate with prior years SWE experience. Data Engineering, MLOps, streaming + batch pipelines." />
-  <meta property="og:title" content="Abhinita Sanabada | Data Engineering • MLOps • Data Science" />
-  <meta property="og:description" content="Data Engineering + MLOps portfolio. Pipelines, orchestration, ML evaluation, cloud-native services." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1220" />
+  <title>Abhinita Sanabada | Internship Portfolio</title>
+  <meta name="description" content="Bright, welcoming internship portfolio: SWE, Data Science/Data Engineering, and AI/ML tracks with expandable sections and role-specific resumes." />
+  <meta name="theme-color" content="#f7f8ff" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <!-- Ambient background -->
-  <div class="bg">
-    <div class="blob blob--a"></div>
-    <div class="blob blob--b"></div>
-    <div class="gridbg"></div>
+  <!-- Decorative background -->
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="sparkles"></div>
   </div>
 
   <header class="topbar">
@@ -27,18 +25,13 @@
         <span class="brand__text">Abhinita Sanabada</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#work">Work</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#tracks">Tracks</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#contact" class="nav__cta">Contact</a>
       </nav>
-
-      <button class="iconbtn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-        <span class="iconbtn__sun" aria-hidden="true">☼</span>
-        <span class="iconbtn__moon" aria-hidden="true">☾</span>
-      </button>
     </div>
   </header>
 
@@ -47,453 +40,226 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__left">
-          <div class="kicker">
-            <span class="pill pill--good">Open to Summer 2026 Internship</span>
-            <span class="pill">Sunnyvale / San Jose, CA</span>
-            <span class="pill pill--soft">Data Engineering • MLOps • DS</span>
+          <div class="chips">
+            <span class="chip chip--mint">Summer 2026 Internship</span>
+            <span class="chip chip--sky">Sunnyvale / San Jose, CA</span>
+            <span class="chip chip--lav">Open to SWE • Data • AI/ML</span>
           </div>
 
-          <h1 class="headline">
-            I build <span class="grad">reliable data products</span>—<br/>
-            pipelines, orchestration, and ML workflows.
+          <h1 class="h1">
+            A bright, role-flexible portfolio<br/>
+            built for internship hiring.
           </h1>
 
-          <p class="subhead">
-            M.S. Data Science candidate with <strong>9 years</strong> of software engineering experience.
-            I’m strongest at turning messy inputs into dependable, observable systems: <strong>batch + streaming ETL</strong>,
-            <strong>ML evaluation</strong>, and <strong>cloud-native services</strong>.
+          <p class="lead">
+            I’m a Data Science graduate student with a strong production engineering background. This site is split into
+            three <strong>expandable tracks</strong> (SWE, Data, AI/ML) so you can quickly scan what matters for the role.
           </p>
 
-          <div class="cta">
-            <!-- Upload a PDF to repo root named resume.pdf -->
-            <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-            <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#tracks">Choose a track</a>
             <a class="btn" href="https://github.com/Sanabada" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
           </div>
 
-          <div class="proof">
-            <div class="proof__card">
-              <div class="proof__big">9 yrs</div>
-              <div class="proof__small">Production SWE experience</div>
+          <div class="mini">
+            <div class="mini__card c1">
+              <div class="mini__title">Strength</div>
+              <div class="mini__text">Building reliable pipelines + services</div>
             </div>
-            <div class="proof__card">
-              <div class="proof__big">Airflow</div>
-              <div class="proof__small">Orchestration + DAG ops</div>
+            <div class="mini__card c2">
+              <div class="mini__title">Style</div>
+              <div class="mini__text">Clean, reproducible, measurable systems</div>
             </div>
-            <div class="proof__card">
-              <div class="proof__big">Spark</div>
-              <div class="proof__small">ETL at scale</div>
-            </div>
-            <div class="proof__card">
-              <div class="proof__big">Kafka</div>
-              <div class="proof__small">Streaming ingestion</div>
+            <div class="mini__card c3">
+              <div class="mini__title">Focus</div>
+              <div class="mini__text">Internship-ready, role-specific storytelling</div>
             </div>
           </div>
         </div>
 
-        <aside class="hero__right glass">
-          <div class="glass__top">
-            <h2>What I do best</h2>
-            <p class="muted">
-              Engineering-first data work: correctness, reproducibility, and operational clarity.
-            </p>
+        <aside class="hero__right card card--glass">
+          <h2 class="h2">Quick access</h2>
+          <p class="muted">
+            Pick a track below to see a tailored pitch and download the matching resume.
+          </p>
+
+          <div class="quickgrid">
+            <a class="quick quick--coral" href="#track-swe">
+              <div class="quick__k">SWE</div>
+              <div class="quick__v">Microservices • APIs • Cloud</div>
+            </a>
+            <a class="quick quick--aqua" href="#track-data">
+              <div class="quick__k">Data</div>
+              <div class="quick__v">Airflow • Spark • Kafka</div>
+            </a>
+            <a class="quick quick--violet" href="#track-ml">
+              <div class="quick__k">AI/ML</div>
+              <div class="quick__v">Modeling • Evaluation • Pipelines</div>
+            </a>
           </div>
 
-          <div class="focus">
-            <div class="focus__row">
-              <div class="focus__icon" aria-hidden="true">⚡</div>
-              <div>
-                <div class="focus__title">Pipelines that don’t break</div>
-                <div class="muted">Schema validation, idempotent loads, observability.</div>
-              </div>
-            </div>
+          <div class="divider"></div>
 
-            <div class="focus__row">
-              <div class="focus__icon" aria-hidden="true">🧠</div>
-              <div>
-                <div class="focus__title">ML workflows with real evaluation</div>
-                <div class="muted">F1/ROC-AUC for classification; RMSE/MAE/R² for regression.</div>
-              </div>
-            </div>
-
-            <div class="focus__row">
-              <div class="focus__icon" aria-hidden="true">☁</div>
-              <div>
-                <div class="focus__title">Cloud-native delivery</div>
-                <div class="muted">Docker/Kubernetes, CI/CD, AWS/Azure.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass__bottom">
-            <div class="minirow">
-              <span class="chip">Python</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Java</span>
-              <span class="chip">Docker</span>
-              <span class="chip">K8s</span>
-            </div>
-
-            <div class="minirow minirow--actions">
-              <a class="btn btn--small" href="#projects">See projects</a>
-              <button class="btn btn--small" id="copyEmail">Copy email</button>
-            </div>
-
-            <p class="tiny muted" id="copyStatus" aria-live="polite"></p>
+          <div class="contactline">
+            <span class="dot"></span>
+            <span class="muted">Email:</span>
+            <a href="mailto:abhinita.sanabada@sjsu.edu">abhinita.sanabada@sjsu.edu</a>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- WHAT I CAN DO FOR A TEAM -->
-    <section id="work" class="section">
+    <!-- TRACKS (expandable + 3 resume downloads) -->
+    <section id="tracks" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>How I add value</h2>
-          <p class="muted">This is the part recruiters actually scan.</p>
+          <h2 class="h2">Choose a track</h2>
+          <p class="muted">Expandable, role-specific sections so this never feels like a one-size-fits-all resume dump.</p>
         </div>
 
-        <div class="tri">
-          <article class="card lift">
-            <h3>Data Engineering</h3>
-            <p class="muted">Design and run batch + streaming systems that are measurable and correct.</p>
-            <ul class="bullets">
-              <li>Airflow DAG design (retries, SLAs, backfills, idempotency)</li>
-              <li>Spark/PySpark transformations with validation + quality checks</li>
-              <li>Kafka ingestion patterns for event-driven pipelines</li>
-            </ul>
-          </article>
+        <div class="accordions">
+          <!-- SWE TRACK -->
+          <details class="acc" id="track-swe">
+            <summary class="acc__summary s1">
+              <span class="acc__title">Software Engineering (SWE)</span>
+              <span class="acc__hint">Microservices • REST APIs • Cloud • Automation</span>
+              <span class="acc__chev" aria-hidden="true">▾</span>
+            </summary>
 
-          <article class="card lift">
-            <h3>MLOps / ML Systems</h3>
-            <p class="muted">Make model work reproducible and reviewable, not “it worked on my laptop.”</p>
-            <ul class="bullets">
-              <li>Train/eval loops with metrics & threshold tuning</li>
-              <li>Time-series split discipline to avoid leakage</li>
-              <li>Versioning, logging, and deployment-friendly packaging</li>
-            </ul>
-          </article>
+            <div class="acc__body">
+              <div class="trackgrid">
+                <div class="card">
+                  <h3 class="h3">SWE Pitch (short)</h3>
+                  <p class="muted">
+                    I build and maintain production services with clean interfaces, strong testing discipline,
+                    and cloud-ready deployment patterns. I’m comfortable owning features end-to-end.
+                  </p>
+                  <div class="pillrow">
+                    <span class="pill">Java/Spring</span><span class="pill">REST</span><span class="pill">CI/CD</span><span class="pill">Docker</span><span class="pill">Azure/AWS</span>
+                  </div>
+                </div>
 
-          <article class="card lift">
-            <h3>Production SWE</h3>
-            <p class="muted">I ship and maintain services: APIs, testing, CI/CD, cloud migrations.</p>
-            <ul class="bullets">
-              <li>Java/Spring REST microservices</li>
-              <li>Automation frameworks + regression acceleration</li>
-              <li>Containerization + cloud migration (AWS/Azure)</li>
-            </ul>
-          </article>
+                <div class="card card--soft">
+                  <h3 class="h3">Download SWE resume</h3>
+                  <p class="muted">Upload your SWE resume as <code>resume_swe.pdf</code> to the repo root.</p>
+                  <a class="btn btn--primary" href="resume_swe.pdf" target="_blank" rel="noopener">Download resume (SWE)</a>
+                  <p class="tiny muted">If you don’t have it yet, temporarily point this to your existing PDF.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- DATA TRACK -->
+          <details class="acc" id="track-data">
+            <summary class="acc__summary s2">
+              <span class="acc__title">Data Science / Data Engineering</span>
+              <span class="acc__hint">ETL • Orchestration • Streaming • Warehousing</span>
+              <span class="acc__chev" aria-hidden="true">▾</span>
+            </summary>
+
+            <div class="acc__body">
+              <div class="trackgrid">
+                <div class="card">
+                  <h3 class="h3">Data Pitch (short)</h3>
+                  <p class="muted">
+                    I design dependable batch + streaming pipelines with clear observability and repeatability:
+                    clean data models, validation, and idempotent loads.
+                  </p>
+                  <div class="pillrow">
+                    <span class="pill">Airflow</span><span class="pill">Spark/PySpark</span><span class="pill">Kafka</span><span class="pill">Snowflake</span><span class="pill">SQL</span>
+                  </div>
+                </div>
+
+                <div class="card card--soft">
+                  <h3 class="h3">Download Data resume</h3>
+                  <p class="muted">Upload your Data resume as <code>resume_data.pdf</code> to the repo root.</p>
+                  <a class="btn btn--primary" href="resume_data.pdf" target="_blank" rel="noopener">Download resume (Data)</a>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- AI/ML TRACK -->
+          <details class="acc" id="track-ml">
+            <summary class="acc__summary s3">
+              <span class="acc__title">AI / ML Engineering</span>
+              <span class="acc__hint">Modeling • Evaluation • Feature pipelines</span>
+              <span class="acc__chev" aria-hidden="true">▾</span>
+            </summary>
+
+            <div class="acc__body">
+              <div class="trackgrid">
+                <div class="card">
+                  <h3 class="h3">AI/ML Pitch (short)</h3>
+                  <p class="muted">
+                    I treat ML as an engineering discipline: reproducible training/evaluation, leakage-safe splits,
+                    and deployment-friendly pipelines—not just notebooks.
+                  </p>
+                  <div class="pillrow">
+                    <span class="pill">scikit-learn</span><span class="pill">PyTorch</span><span class="pill">Metrics</span><span class="pill">Pandas</span><span class="pill">Experiment hygiene</span>
+                  </div>
+                </div>
+
+                <div class="card card--soft">
+                  <h3 class="h3">Download AI/ML resume</h3>
+                  <p class="muted">Upload your AI/ML resume as <code>resume_ml.pdf</code> to the repo root.</p>
+                  <a class="btn btn--primary" href="resume_ml.pdf" target="_blank" rel="noopener">Download resume (AI/ML)</a>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="note">
+          Tip: You can keep the same base content across all three PDFs—just tune the summary + project ordering per track.
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (expandable cards) -->
     <section id="projects" class="section section--alt">
       <div class="container">
         <div class="section__head">
-          <h2>Projects (case-study style)</h2>
-          <p class="muted">Each card is written as Problem → Build → Result. Replace repo links when ready.</p>
+          <h2 class="h2">Projects</h2>
+          <p class="muted">Expandable cards: quick scan first, details on demand.</p>
         </div>
 
-        <div class="grid">
-          <article class="card project lift">
-            <div class="project__top">
-              <h3>Real-Time SMS Spam Classification</h3>
-              <span class="badge">Streaming + ML</span>
-            </div>
-
-            <div class="project__body">
-              <div class="project__line">
-                <span class="label">Problem</span>
-                <span class="muted">Classify incoming SMS in real time with repeatable evaluation and operational visibility.</span>
+        <div class="projgrid">
+          <details class="pcard p1">
+            <summary class="pcard__sum">
+              <div>
+                <div class="pcard__title">Real-Time SMS Spam Classification</div>
+                <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
               </div>
-              <div class="project__line">
-                <span class="label">Build</span>
-                <span class="muted">Kafka pipeline + REST scoring; containerized producer/consumer setup.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Result</span>
-                <span class="muted">Metric-driven selection (precision/recall/F1) with latency awareness; drift-ready pipeline structure.</span>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span>Kafka</span><span>Python</span><span>REST</span><span>Docker Compose</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: replace with your actual project repo -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">View repo</a>
-            </div>
-          </article>
-
-          <article class="card project lift">
-            <div class="project__top">
-              <h3>Healthcare Affordability Finder</h3>
-              <span class="badge">Big Data ETL</span>
-            </div>
-
-            <div class="project__body">
-              <div class="project__line">
-                <span class="label">Problem</span>
-                <span class="muted">Process large hospital price data and enable search + price estimation for procedures.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Build</span>
-                <span class="muted">HDFS + Hadoop MR + PySpark ETL; Spark ML regression; embedding-based semantic matching.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Result</span>
-                <span class="muted">Queryable curated dataset; RMSE/MAE/R² tracking for estimation; semantic lookups for better matching.</span>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span>HDFS</span><span>Hadoop MR</span><span>PySpark</span><span>Spark ML</span><span>Embeddings</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: replace with your actual project repo -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">View repo</a>
-            </div>
-          </article>
-
-          <article class="card project lift">
-            <div class="project__top">
-              <h3>NYC Taxi Price Prediction</h3>
-              <span class="badge">Orchestration</span>
-            </div>
-
-            <div class="project__body">
-              <div class="project__line">
-                <span class="label">Problem</span>
-                <span class="muted">Build a dependable ETL + features pipeline combining taxi trips and weather inputs.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Build</span>
-                <span class="muted">Airflow orchestration; PySpark transformations; Snowflake loading via staging + MERGE.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Result</span>
-                <span class="muted">Incremental/idempotent loads; curated analytics tables and repeatable batch runs.</span>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span>Airflow</span><span>PySpark</span><span>Snowflake</span><span>ETL</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: replace with your actual project repo -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">View repo</a>
-            </div>
-          </article>
-
-          <article class="card project lift">
-            <div class="project__top">
-              <h3>Weather Data Ingestion Pipeline</h3>
-              <span class="badge">Batch + Streaming</span>
-            </div>
-
-            <div class="project__body">
-              <div class="project__line">
-                <span class="label">Problem</span>
-                <span class="muted">Ingest station feeds reliably and serve cleaned aggregates for consumption.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Build</span>
-                <span class="muted">HDFS storage, Spark ETL, Kafka ingestion, REST API surface, basic validation UI.</span>
-              </div>
-              <div class="project__line">
-                <span class="label">Result</span>
-                <span class="muted">Leakage-safe time-series splits + MAE/RMSE tracking; reusable ingestion + serving structure.</span>
-              </div>
-            </div>
-
-            <div class="tags">
-              <span>HDFS</span><span>Spark</span><span>Kafka</span><span>REST</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: replace with your actual project repo -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">View repo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>Experience</h2>
-          <p class="muted">A clean timeline with impact bullets (no walls of text).</p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline__item lift">
-            <div class="timeline__mark">WF</div>
-            <div class="timeline__card card">
-              <div class="row">
-                <h3>Wells Fargo — Senior Software Engineer</h3>
-                <span class="muted">Nov 2021 – Jan 2024</span>
-              </div>
+              <span class="pcard__chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="pcard__body">
               <ul class="bullets">
-                <li>Java/Spring microservices with REST APIs; reliability focus in core banking systems.</li>
-                <li>Built Selenium + TestNG automation framework; reduced regression cycle time by ~40%.</li>
-                <li>Migrated services to Azure and containerized with Docker for scalability.</li>
+                <li>Streaming ingestion and near-real-time scoring path.</li>
+                <li>Evaluation mindset: precision/recall/F1 + latency awareness.</li>
+                <li>Reproducible runs via containerized components.</li>
               </ul>
-              <div class="tags">
-                <span>Java/Spring</span><span>SQL</span><span>Azure</span><span>Docker</span><span>Jenkins</span>
+              <div class="tagrow">
+                <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
+              </div>
+              <div class="actions">
+                <!-- Replace when you have the repo -->
+                <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
               </div>
             </div>
-          </div>
+          </details>
 
-          <div class="timeline__item lift">
-            <div class="timeline__mark">SAP</div>
-            <div class="timeline__card card">
-              <div class="row">
-                <h3>SAP Labs — Software Development Engineer 2</h3>
-                <span class="muted">Apr 2019 – Oct 2021</span>
+          <details class="pcard p2">
+            <summary class="pcard__sum">
+              <div>
+                <div class="pcard__title">Healthcare Affordability Finder</div>
+                <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
               </div>
+              <span class="pcard__chev" aria-hidden="true">+</span>
+            </summary>
+            <div class="pcard__body">
               <ul class="bullets">
-                <li>Feature delivery for SAP HANA Cloud automotive product used by global clients.</li>
-                <li>Kyma/Kubernetes POC to simplify runtime ops and improve traceability.</li>
-                <li>Hotfix and post-production support using ServiceNow and Splunk.</li>
-              </ul>
-              <div class="tags">
-                <span>Spring Boot</span><span>Kubernetes</span><span>HANA Cloud</span><span>Splunk</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline__item lift">
-            <div class="timeline__mark">JPMC</div>
-            <div class="timeline__card card">
-              <div class="row">
-                <h3>J.P. Morgan Chase &amp; Co. — Software Engineer</h3>
-                <span class="muted">Jan 2017 – Apr 2019</span>
-              </div>
-              <ul class="bullets">
-                <li>Ingestion pipelines and services feeding analytics; availability improvements via replication/indexing.</li>
-                <li>Automated ETL using Airflow + Spark with data quality checks.</li>
-              </ul>
-              <div class="tags">
-                <span>Python</span><span>SQL</span><span>Airflow</span><span>Spark</span><span>Oracle</span><span>MongoDB</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline__item lift">
-            <div class="timeline__mark">CG</div>
-            <div class="timeline__card card">
-              <div class="row">
-                <h3>Capgemini — Software Engineer</h3>
-                <span class="muted">Apr 2014 – Aug 2016</span>
-              </div>
-              <ul class="bullets">
-                <li>Multi-database abstraction layer in Core Java to improve portability/performance.</li>
-                <li>Reporting solutions using JasperReports and Oracle SQL.</li>
-              </ul>
-              <div class="tags">
-                <span>Core Java</span><span>Oracle SQL</span><span>Reporting</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>Skills</h2>
-          <p class="muted">Grouped for scanning; no keyword dumping.</p>
-        </div>
-
-        <div class="skills">
-          <div class="card lift">
-            <h3>Core</h3>
-            <p class="muted">Python • SQL • Java</p>
-            <div class="chips">
-              <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Java</span>
-              <span class="chip">REST</span><span class="chip">Microservices</span>
-            </div>
-          </div>
-
-          <div class="card lift">
-            <h3>Data Engineering</h3>
-            <p class="muted">Airflow • Spark/PySpark • Kafka • ETL • Data quality</p>
-            <div class="chips">
-              <span class="chip">Airflow</span><span class="chip">PySpark</span><span class="chip">Kafka</span>
-              <span class="chip">HDFS</span><span class="chip">Hadoop MR</span><span class="chip">Snowflake</span>
-            </div>
-          </div>
-
-          <div class="card lift">
-            <h3>Cloud / DevOps</h3>
-            <p class="muted">AWS • Azure • Docker • Kubernetes • CI/CD</p>
-            <div class="chips">
-              <span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Docker</span>
-              <span class="chip">Kubernetes</span><span class="chip">Jenkins</span><span class="chip">GitHub Actions</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="contact card lift">
-          <div>
-            <h2>Contact</h2>
-            <p class="muted">
-              Fastest way to reach me is email or LinkedIn.
-            </p>
-          </div>
-
-          <div class="contact__links">
-            <a class="btn btn--primary" href="mailto:abhinita.sanabada@sjsu.edu">Email (SJSU)</a>
-            <a class="btn" href="mailto:abhinita.sanabada@gmail.com">Email (Gmail)</a>
-            <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-
-        <footer class="footer">
-          <span class="tiny muted">© <span id="year"></span> Abhinita Sanabada • Built on GitHub Pages</span>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Theme toggle (persists)
-    const root = document.documentElement;
-    const key = "site-theme";
-    const saved = localStorage.getItem(key);
-    if (saved) root.dataset.theme = saved;
-
-    document.getElementById("themeToggle").addEventListener("click", () => {
-      const cur = root.dataset.theme === "light" ? "light" : "dark";
-      const next = cur === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem(key, next);
-    });
-
-    // Copy email
-    const copyBtn = document.getElementById("copyEmail");
-    const status = document.getElementById("copyStatus");
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText("abhinita.sanabada@sjsu.edu");
-        status.textContent = "Copied: abhinita.sanabada@sjsu.edu";
-        setTimeout(() => (status.textContent = ""), 2200);
-      } catch {
-        status.textContent = "Copy failed — you can manually email: abhinita.sanabada@sjsu.edu";
-      }
-    });
-  </script>
-</body>
-</html>
+                <li>Large-scale ETL for hospital pricing data (millions of rows).</li>
+                <li>Regression evaluation with RMSE/MAE/R².</li>
+                <li>Embedding-based procedure matching for better search UX.</li>
