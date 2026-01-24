@@ -218,109 +218,149 @@
     </section>
 
     <!-- PROJECTS (expandable cards) -->
-    <section id="projects" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Projects</h2>
-          <p class="muted">Expandable cards: quick scan first, details on demand.</p>
+   <section id="projects" class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Projects</h2>
+      <p class="muted">Expandable cards: quick scan first, details on demand.</p>
+    </div>
+
+    <div class="projgrid">
+      <!-- Project 1 -->
+      <details class="pcard p1">
+        <summary class="pcard__sum">
+          <div class="pcard__left">
+            <div class="pcard__title">Real-Time SMS Spam Classification</div>
+            <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
+          </div>
+
+          <div class="pcard__right">
+            <!-- REPLACE this href -->
+            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_SMS_SPAM" target="_blank" rel="noopener">Repo</a>
+
+            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+            <span class="pcard__chev" aria-hidden="true">+</span>
+          </div>
+        </summary>
+
+        <div class="pcard__body">
+          <ul class="bullets">
+            <li>Streaming ingestion and near-real-time scoring path.</li>
+            <li>Evaluation mindset: precision/recall/F1 + latency awareness.</li>
+            <li>Reproducible runs via containerized components.</li>
+          </ul>
+          <div class="tagrow">
+            <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--small" href="REPLACE_REPO_SMS_SPAM" target="_blank" rel="noopener">Open Repo</a>
+          </div>
         </div>
+      </details>
 
-        <div class="projgrid">
-          <details class="pcard p1">
-            <summary class="pcard__sum">
-              <div>
-                <div class="pcard__title">Real-Time SMS Spam Classification</div>
-                <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
-              </div>
-              <span class="pcard__chev" aria-hidden="true">+</span>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Streaming ingestion and near-real-time scoring path.</li>
-                <li>Evaluation mindset: precision/recall/F1 + latency awareness.</li>
-                <li>Reproducible runs via containerized components.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
-              </div>
-              <div class="actions">
-                <!-- Replace when you have the repo -->
-                <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-              </div>
-            </div>
-          </details>
+      <!-- Project 2 -->
+      <details class="pcard p2">
+        <summary class="pcard__sum">
+          <div class="pcard__left">
+            <div class="pcard__title">Healthcare Affordability Finder</div>
+            <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
+          </div>
 
-          <details class="pcard p2">
-            <summary class="pcard__sum">
-              <div>
-                <div class="pcard__title">Healthcare Affordability Finder</div>
-                <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
-              </div>
-              <span class="pcard__chev" aria-hidden="true">+</span>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Large-scale ETL for hospital pricing data (millions of rows).</li>
-                <li>Regression evaluation with RMSE/MAE/R².</li>
-                <li>Embedding-based procedure matching for better search UX.</li>
-              </ul>
-              <div class="tagrow">
-                <span>HDFS</span><span>Hadoop</span><span>PySpark</span><span>Spark ML</span><span>Embeddings</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-              </div>
-            </div>
-          </details>
+          <div class="pcard__right">
+            <!-- REPLACE this href -->
+            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_HEALTHCARE" target="_blank" rel="noopener">Repo</a>
 
-          <details class="pcard p3">
-            <summary class="pcard__sum">
-              <div>
-                <div class="pcard__title">NYC Taxi Price Prediction</div>
-                <div class="pcard__sub">Airflow DAGs • PySpark • Snowflake loads</div>
-              </div>
-              <span class="pcard__chev" aria-hidden="true">+</span>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Orchestrated pipelines with operational patterns (backfills, retries, checks).</li>
-                <li>Curated datasets loaded into Snowflake with incremental/idempotent design.</li>
-                <li>Designed for analytics + feature readiness.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Airflow</span><span>PySpark</span><span>Snowflake</span><span>ETL</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-              </div>
-            </div>
-          </details>
+            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+            <span class="pcard__chev" aria-hidden="true">+</span>
+          </div>
+        </summary>
 
-          <details class="pcard p4">
-            <summary class="pcard__sum">
-              <div>
-                <div class="pcard__title">Weather Data Ingestion Pipeline</div>
-                <div class="pcard__sub">Spark batch/stream • Kafka ingestion • REST API</div>
-              </div>
-              <span class="pcard__chev" aria-hidden="true">+</span>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Built ingestion + transformation steps with consistency checks.</li>
-                <li>Time-series split discipline to avoid leakage.</li>
-                <li>MAE/RMSE tracking to evaluate improvements over time.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Spark</span><span>Kafka</span><span>REST</span><span>HDFS</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-              </div>
-            </div>
-          </details>
+        <div class="pcard__body">
+          <ul class="bullets">
+            <li>Large-scale ETL for hospital pricing data (millions of rows).</li>
+            <li>Regression evaluation with RMSE/MAE/R².</li>
+            <li>Embedding-based procedure matching for better search UX.</li>
+          </ul>
+          <div class="tagrow">
+            <span>HDFS</span><span>Hadoop</span><span>PySpark</span><span>Spark ML</span><span>Embeddings</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--small" href="REPLACE_REPO_HEALTHCARE" target="_blank" rel="noopener">Open Repo</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </details>
+
+      <!-- Project 3 -->
+      <details class="pcard p3">
+        <summary class="pcard__sum">
+          <div class="pcard__left">
+            <div class="pcard__title">NYC Taxi Price Prediction</div>
+            <div class="pcard__sub">Airflow DAGs • PySpark • Snowflake loads</div>
+          </div>
+
+          <div class="pcard__right">
+            <!-- REPLACE this href -->
+            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_TAXI" target="_blank" rel="noopener">Repo</a>
+
+            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+            <span class="pcard__chev" aria-hidden="true">+</span>
+          </div>
+        </summary>
+
+        <div class="pcard__body">
+          <ul class="bullets">
+            <li>Orchestrated pipelines with operational patterns (backfills, retries, checks).</li>
+            <li>Curated datasets loaded into Snowflake with incremental/idempotent design.</li>
+            <li>Designed for analytics + feature readiness.</li>
+          </ul>
+          <div class="tagrow">
+            <span>Airflow</span><span>PySpark</span><span>Snowflake</span><span>ETL</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--small" href="REPLACE_REPO_TAXI" target="_blank" rel="noopener">Open Repo</a>
+          </div>
+        </div>
+      </details>
+
+      <!-- Project 4 -->
+      <details class="pcard p4">
+        <summary class="pcard__sum">
+          <div class="pcard__left">
+            <div class="pcard__title">Weather Data Ingestion Pipeline</div>
+            <div class="pcard__sub">Spark batch/stream • Kafka ingestion • REST API</div>
+          </div>
+
+          <div class="pcard__right">
+            <!-- REPLACE this href -->
+            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_WEATHER" target="_blank" rel="noopener">Repo</a>
+
+            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+            <span class="pcard__chev" aria-hidden="true">+</span>
+          </div>
+        </summary>
+
+        <div class="pcard__body">
+          <ul class="bullets">
+            <li>Built ingestion + transformation steps with consistency checks.</li>
+            <li>Time-series split discipline to avoid leakage.</li>
+            <li>MAE/RMSE tracking to evaluate improvements over time.</li>
+          </ul>
+          <div class="tagrow">
+            <span>Spark</span><span>Kafka</span><span>REST</span><span>HDFS</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--small" href="REPLACE_REPO_WEATHER" target="_blank" rel="noopener">Open Repo</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 
     <!-- EXPERIENCE (expandable; no "9 years" headline) -->
     <section id="experience" class="section">
@@ -466,15 +506,32 @@
   </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Small polish: swap + / − on project expanders
-    document.querySelectorAll(".pcard").forEach(d => {
-      const chev = d.querySelector(".pcard__chev");
-      const set = () => { chev.textContent = d.open ? "−" : "+"; };
-      set();
-      d.addEventListener("toggle", set);
+  // Stop clicks on buttons/links inside <summary> from toggling the <details>
+  document.querySelectorAll(".js-no-toggle").forEach(el => {
+    el.addEventListener("click", (e) => e.stopPropagation());
+  });
+
+  // Details button toggles the card open/closed
+  document.querySelectorAll(".js-toggle-details").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = btn.closest("details");
+      card.open = !card.open;
+      // keep plus/minus synced
+      const chev = card.querySelector(".pcard__chev");
+      if (chev) chev.textContent = card.open ? "−" : "+";
     });
-  </script>
+  });
+
+  // Keep plus/minus synced when user clicks elsewhere
+  document.querySelectorAll(".pcard").forEach(d => {
+    const chev = d.querySelector(".pcard__chev");
+    const set = () => { if (chev) chev.textContent = d.open ? "−" : "+"; };
+    set();
+    d.addEventListener("toggle", set);
+  });
+</script>
+
 </body>
 </html>
