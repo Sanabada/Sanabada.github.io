@@ -4,176 +4,105 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abhinita Sanabada | Data Engineering • MLOps • Data Science</title>
-  <meta name="description" content="M.S. Data Science candidate with prior years of software engineering experience. Seeking Summer 2026 internships in Data Engineering / MLOps / Data Science." />
+  <meta name="description" content="M.S. Data Science candidate with prior years SWE experience. Data Engineering, MLOps, streaming + batch pipelines." />
+  <meta property="og:title" content="Abhinita Sanabada | Data Engineering • MLOps • Data Science" />
+  <meta property="og:description" content="Data Engineering + MLOps portfolio. Pipelines, orchestration, ML evaluation, cloud-native services." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1220" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="#top">AS</a>
+  <!-- Ambient background -->
+  <div class="bg">
+    <div class="blob blob--a"></div>
+    <div class="blob blob--b"></div>
+    <div class="gridbg"></div>
+  </div>
 
-      <nav class="nav">
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark">AS</span>
+        <span class="brand__text">Abhinita Sanabada</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a class="nav__cta" href="#contact">Contact</a>
+        <a href="#contact" class="nav__cta">Contact</a>
       </nav>
+
+      <button class="iconbtn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <span class="iconbtn__sun" aria-hidden="true">☼</span>
+        <span class="iconbtn__moon" aria-hidden="true">☾</span>
+      </button>
     </div>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__left">
           <div class="kicker">
-            <span class="pill pill--green">Open to Summer 2026 Internship</span>
+            <span class="pill pill--good">Open to Summer 2026 Internship</span>
             <span class="pill">Sunnyvale / San Jose, CA</span>
+            <span class="pill pill--soft">Data Engineering • MLOps • DS</span>
           </div>
 
-          <h1>Abhinita Sanabada</h1>
-          <p class="subtitle">
-            M.S. Data Science candidate with <strong>9 years</strong> of software engineering experience building
-            reliable, data-centric systems. Focus: <strong>Data Engineering</strong>, <strong>MLOps</strong>, and
-            production-grade pipelines.
+          <h1 class="headline">
+            I build <span class="grad">reliable data products</span>—<br/>
+            pipelines, orchestration, and ML workflows.
+          </h1>
+
+          <p class="subhead">
+            M.S. Data Science candidate with <strong>9 years</strong> of software engineering experience.
+            I’m strongest at turning messy inputs into dependable, observable systems: <strong>batch + streaming ETL</strong>,
+            <strong>ML evaluation</strong>, and <strong>cloud-native services</strong>.
           </p>
 
-          <div class="quicklinks">
-            <!-- Upload a PDF named resume.pdf to your repo root (or change this link). -->
-            <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <div class="cta">
+            <!-- Upload a PDF to repo root named resume.pdf -->
+            <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
             <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn" href="https://github.com/Sanabada" target="_blank" rel="noopener">GitHub</a>
           </div>
 
-          <div class="stats">
-            <div class="stat">
-              <div class="stat__num">9</div>
-              <div class="stat__label">Years SWE</div>
+          <div class="proof">
+            <div class="proof__card">
+              <div class="proof__big">9 yrs</div>
+              <div class="proof__small">Production SWE experience</div>
             </div>
-            <div class="stat">
-              <div class="stat__num">Airflow</div>
-              <div class="stat__label">Orchestration</div>
+            <div class="proof__card">
+              <div class="proof__big">Airflow</div>
+              <div class="proof__small">Orchestration + DAG ops</div>
             </div>
-            <div class="stat">
-              <div class="stat__num">Spark</div>
-              <div class="stat__label">Batch + ETL</div>
+            <div class="proof__card">
+              <div class="proof__big">Spark</div>
+              <div class="proof__small">ETL at scale</div>
             </div>
-            <div class="stat">
-              <div class="stat__num">Kafka</div>
-              <div class="stat__label">Streaming</div>
+            <div class="proof__card">
+              <div class="proof__big">Kafka</div>
+              <div class="proof__small">Streaming ingestion</div>
             </div>
           </div>
         </div>
 
-        <aside class="hero__right card">
-          <h2 class="card__title">What I’m targeting</h2>
-          <ul class="cleanlist">
-            <li><strong>Internships:</strong> Data Engineering / MLOps / Data Science</li>
-            <li><strong>Strengths:</strong> building & operating pipelines, cloud-native services, ML evaluation</li>
-            <li><strong>Stack:</strong> Python/SQL/Java, Airflow, Spark, Kafka, Docker, Kubernetes, AWS/Azure</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <h3 class="mini">Contact</h3>
-          <p class="muted">
-            Email: <a href="mailto:abhinita.sanabada@sjsu.edu">abhinita.sanabada@sjsu.edu</a><br/>
-            Alternate: <a href="mailto:abhinita.sanabada@gmail.com">abhinita.sanabada@gmail.com</a>
-          </p>
-          <p class="muted tiny">
-            Tip: I’m not showing phone on the public page to reduce spam. Add it if you want.
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2>Featured Projects</h2>
-          <p class="muted">Projects that show end-to-end engineering: ingestion → processing → modeling → serving/evaluation.</p>
-        </div>
-
-        <div class="grid">
-          <article class="card project">
-            <div class="project__top">
-              <h3>Real-Time SMS Spam Classification</h3>
-              <span class="badge">Streaming + ML</span>
-            </div>
+        <aside class="hero__right glass">
+          <div class="glass__top">
+            <h2>What I do best</h2>
             <p class="muted">
-              Event-driven pipeline to classify SMS as spam/ham using Kafka with REST-based scoring and reproducible evaluation.
+              Engineering-first data work: correctness, reproducibility, and operational clarity.
             </p>
-            <ul class="bullets">
-              <li>Tracks precision/recall/F1 + latency and drift; supports repeatable threshold/model selection.</li>
-              <li>Containerized with Docker Compose (Kafka/Zookeeper + Python producers/consumers).</li>
-            </ul>
-            <div class="tags">
-              <span>Kafka</span><span>Python</span><span>REST</span><span>Docker Compose</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: Replace with your actual repo, e.g. https://github.com/Sanabada/sms-spam-classification -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
+          </div>
 
-          <article class="card project">
-            <div class="project__top">
-              <h3>Healthcare Affordability Finder</h3>
-              <span class="badge">Big Data ETL</span>
-            </div>
-            <p class="muted">
-              Big-data ETL on HDFS + Hadoop MapReduce + PySpark for CMS price transparency (millions of rows), plus price prediction.
-            </p>
-            <ul class="bullets">
-              <li>Spark ML regression pipeline with RMSE/MAE/R² tracking for discounted cash price estimation.</li>
-              <li>Semantic search using SentenceTransformers embeddings for procedure matching and comparisons.</li>
-            </ul>
-            <div class="tags">
-              <span>HDFS</span><span>Hadoop MR</span><span>PySpark</span><span>Spark ML</span><span>Embeddings</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: Replace with your actual repo, e.g. https://github.com/Sanabada/healthcare-affordability-finder -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <div class="project__top">
-              <h3>NYC Taxi Price Prediction</h3>
-              <span class="badge">Orchestration</span>
-            </div>
-            <p class="muted">
-              Batch taxi ETL + near real-time weather ingestion orchestrated via Airflow; curated datasets loaded into Snowflake for analytics/features.
-            </p>
-            <ul class="bullets">
-              <li>Scalable PySpark transformations with schema validation/cleansing and operational checks.</li>
-              <li>Idempotent incremental loads using staging + COPY + transactional MERGE patterns.</li>
-            </ul>
-            <div class="tags">
-              <span>Airflow</span><span>PySpark</span><span>Snowflake</span><span>ETL</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: Replace with your actual repo, e.g. https://github.com/Sanabada/nyc-taxi-price-prediction -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noopener">Repo</a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <div class="project__top">
-              <h3>Weather Data Ingestion Pipeline</h3>
-              <span class="badge">Batch + Streaming</span>
-            </div>
-            <p class="muted">
-              Scalable pipeline on HDFS for raw station feeds using Spark batch/stream ETL plus Kafka ingestion, with a lightweight REST API.
-            </p>
-            <ul class="bullets">
-              <li>Time-series splits to avoid leakage; tracks MAE/RMSE for continuous improvements.</li>
-              <li>Includes a simple PyQt5 validation UI for data checks.</li>
-            </ul>
-            <div class="tags">
-              <span>HDFS</span><span>Spark</span><span>Kafka</span><span>REST</span>
-            </div>
-            <div class="actions">
-              <!-- TODO: Replace with your actual repo, e.g. https://github.com/Sanabada/weather-data-ingestion -->
-              <a class="btn btn--small" href="https://github.com/Sanabada" target="_blank" rel="noo_
+          <div class="focus">
+            <div class="focus__row">
+              <div class="focus__icon" aria-hidden="true">⚡</div>
+              <div>
+                <div class="focus__title">Pipelines that don’t break</div>
+                <div class="muted">Schema validation, idempotent loads, observability.</div>
+              </div>
