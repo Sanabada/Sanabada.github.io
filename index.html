@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abhinita Sanabada | Internship Portfolio</title>
-  <meta name="description" content="Bright, welcoming internship portfolio: SWE, Data Science/Data Engineering, and AI/ML tracks with expandable sections and role-specific resumes." />
-  <meta name="theme-color" content="#f7f8ff" />
+  <meta name="description" content="Internship portfolio for Abhinita Sanabada: SWE, Data Engineering/Data Science, and AI/ML tracks with expandable sections, projects, and role-specific resumes." />
+  <meta name="theme-color" content="#e5ddcf" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
@@ -47,13 +47,14 @@
           </div>
 
           <h1 class="h1">
-            A bright, role-flexible portfolio<br/>
-            built for internship hiring.
+            Hi, I’m Abhinita.<br/>
+            I build data products that are clean, reliable, and easy to operate.
           </h1>
 
           <p class="lead">
-            I’m a Data Science graduate student with a strong production engineering background. This site is split into
-            three <strong>expandable tracks</strong> (SWE, Data, AI/ML) so you can quickly scan what matters for the role.
+            I’m a Data Science graduate student who enjoys bridging engineering and analytics—turning raw data into
+            pipelines, APIs, and models that teams can trust. I’m currently seeking <strong>Summer 2026 internship</strong>
+            opportunities across <strong>SWE</strong>, <strong>Data Engineering/Data Science</strong>, and <strong>AI/ML</strong>.
           </p>
 
           <div class="hero__cta">
@@ -130,7 +131,7 @@
             <div class="acc__body">
               <div class="trackgrid">
                 <div class="card">
-                  <h3 class="h3">SWE Pitch (short)</h3>
+                  <h3 class="h3">SWE Pitch</h3>
                   <p class="muted">
                     I build and maintain production services with clean interfaces, strong testing discipline,
                     and cloud-ready deployment patterns. I’m comfortable owning features end-to-end.
@@ -142,9 +143,10 @@
 
                 <div class="card card--soft">
                   <h3 class="h3">Download SWE resume</h3>
-                  <p class="muted">Upload your SWE resume as <code>resume_swe.pdf</code> to the repo root.</p>
-                  <a class="btn btn--primary" href="resume_swe.pdf" target="_blank" rel="noopener">Download resume (SWE)</a>
-                  <p class="tiny muted">If you don’t have it yet, temporarily point this to your existing PDF.</p>
+                  <p class="muted">
+                    Upload <code>resume_swe.pdf</code> to the repo root (same folder as <code>index.html</code>). This site cannot “upload” files—GitHub Pages only serves files already in the repo.
+                  </p>
+                  <a class="btn btn--primary" href="resume_swe.pdf" target="_blank" rel="noopener" download>Download resume (SWE)</a>
                 </div>
               </div>
             </div>
@@ -161,7 +163,7 @@
             <div class="acc__body">
               <div class="trackgrid">
                 <div class="card">
-                  <h3 class="h3">Data Pitch (short)</h3>
+                  <h3 class="h3">Data Pitch</h3>
                   <p class="muted">
                     I design dependable batch + streaming pipelines with clear observability and repeatability:
                     clean data models, validation, and idempotent loads.
@@ -173,8 +175,10 @@
 
                 <div class="card card--soft">
                   <h3 class="h3">Download Data resume</h3>
-                  <p class="muted">Upload your Data resume as <code>resume_data.pdf</code> to the repo root.</p>
-                  <a class="btn btn--primary" href="resume_data.pdf" target="_blank" rel="noopener">Download resume (Data)</a>
+                  <p class="muted">
+                    Upload <code>resume_data.pdf</code> to the repo root (same folder as <code>index.html</code>).
+                  </p>
+                  <a class="btn btn--primary" href="resume_data.pdf" target="_blank" rel="noopener" download>Download resume (Data)</a>
                 </div>
               </div>
             </div>
@@ -191,7 +195,7 @@
             <div class="acc__body">
               <div class="trackgrid">
                 <div class="card">
-                  <h3 class="h3">AI/ML Pitch (short)</h3>
+                  <h3 class="h3">AI/ML Pitch</h3>
                   <p class="muted">
                     I treat ML as an engineering discipline: reproducible training/evaluation, leakage-safe splits,
                     and deployment-friendly pipelines—not just notebooks.
@@ -203,8 +207,10 @@
 
                 <div class="card card--soft">
                   <h3 class="h3">Download AI/ML resume</h3>
-                  <p class="muted">Upload your AI/ML resume as <code>resume_ml.pdf</code> to the repo root.</p>
-                  <a class="btn btn--primary" href="resume_ml.pdf" target="_blank" rel="noopener">Download resume (AI/ML)</a>
+                  <p class="muted">
+                    Upload <code>resume_ml.pdf</code> to the repo root (same folder as <code>index.html</code>).
+                  </p>
+                  <a class="btn btn--primary" href="resume_ml.pdf" target="_blank" rel="noopener" download>Download resume (AI/ML)</a>
                 </div>
               </div>
             </div>
@@ -217,152 +223,139 @@
       </div>
     </section>
 
-    <!-- PROJECTS (expandable cards) -->
-   <section id="projects" class="section section--alt">
-  <div class="container">
-    <div class="section__head">
-      <h2 class="h2">Projects</h2>
-      <p class="muted">Expandable cards: quick scan first, details on demand.</p>
-    </div>
-
-    <div class="projgrid">
-      <!-- Project 1 -->
-      <details class="pcard p1">
-        <summary class="pcard__sum">
-          <div class="pcard__left">
-            <div class="pcard__title">Real-Time SMS Spam Classification</div>
-            <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
-          </div>
-
-          <div class="pcard__right">
-            <!-- REPLACE this href -->
-            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_SMS_SPAM" target="_blank" rel="noopener">Repo</a>
-
-            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-            <span class="pcard__chev" aria-hidden="true">+</span>
-          </div>
-        </summary>
-
-        <div class="pcard__body">
-          <ul class="bullets">
-            <li>Streaming ingestion and near-real-time scoring path.</li>
-            <li>Evaluation mindset: precision/recall/F1 + latency awareness.</li>
-            <li>Reproducible runs via containerized components.</li>
-          </ul>
-          <div class="tagrow">
-            <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn btn--small" href="REPLACE_REPO_SMS_SPAM" target="_blank" rel="noopener">Open Repo</a>
-          </div>
+    <!-- PROJECTS (expandable cards + Repo always visible + Details →) -->
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Projects</h2>
+          <p class="muted">Expandable cards with quick actions—Repo always visible, and “Details →” to expand.</p>
         </div>
-      </details>
 
-      <!-- Project 2 -->
-      <details class="pcard p2">
-        <summary class="pcard__sum">
-          <div class="pcard__left">
-            <div class="pcard__title">Healthcare Affordability Finder</div>
-            <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
-          </div>
+        <div class="projgrid">
+          <!-- Project 1 -->
+          <details class="pcard p1">
+            <summary class="pcard__sum">
+              <div class="pcard__left">
+                <div class="pcard__title">Real-Time SMS Spam Classification</div>
+                <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
+              </div>
 
-          <div class="pcard__right">
-            <!-- REPLACE this href -->
-            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_HEALTHCARE" target="_blank" rel="noopener">Repo</a>
+              <div class="pcard__right">
+                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/kafka-sms-spam-pipeline" target="_blank" rel="noopener">Repo</a>
+                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+                <span class="pcard__chev" aria-hidden="true">+</span>
+              </div>
+            </summary>
 
-            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-            <span class="pcard__chev" aria-hidden="true">+</span>
-          </div>
-        </summary>
+            <div class="pcard__body">
+              <ul class="bullets">
+                <li>Built a streaming ingestion workflow and near-real-time scoring path.</li>
+                <li>Emphasized evaluation discipline (precision/recall/F1) and operational clarity.</li>
+                <li>Structured components for reproducibility and straightforward deployment.</li>
+              </ul>
+              <div class="tagrow">
+                <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn--small" href="https://github.com/Sanabada/kafka-sms-spam-pipeline" target="_blank" rel="noopener">Open Repo</a>
+              </div>
+            </div>
+          </details>
 
-        <div class="pcard__body">
-          <ul class="bullets">
-            <li>Large-scale ETL for hospital pricing data (millions of rows).</li>
-            <li>Regression evaluation with RMSE/MAE/R².</li>
-            <li>Embedding-based procedure matching for better search UX.</li>
-          </ul>
-          <div class="tagrow">
-            <span>HDFS</span><span>Hadoop</span><span>PySpark</span><span>Spark ML</span><span>Embeddings</span>
-          </div>
+          <!-- Project 2 -->
+          <details class="pcard p2">
+            <summary class="pcard__sum">
+              <div class="pcard__left">
+                <div class="pcard__title">Healthcare Affordability Finder System</div>
+                <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
+              </div>
 
-          <div class="actions">
-            <a class="btn btn--small" href="REPLACE_REPO_HEALTHCARE" target="_blank" rel="noopener">Open Repo</a>
-          </div>
+              <div class="pcard__right">
+                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System" target="_blank" rel="noopener">Repo</a>
+                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+                <span class="pcard__chev" aria-hidden="true">+</span>
+              </div>
+            </summary>
+
+            <div class="pcard__body">
+              <ul class="bullets">
+                <li>ETL over healthcare pricing data with a focus on scale and data quality.</li>
+                <li>Ran regression experiments and tracked RMSE/MAE/R² to compare approaches.</li>
+                <li>Added semantic matching to improve search and user experience.</li>
+              </ul>
+              <div class="tagrow">
+                <span>HDFS</span><span>Hadoop</span><span>PySpark</span><span>Regression</span><span>Embeddings</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn--small" href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System" target="_blank" rel="noopener">Open Repo</a>
+              </div>
+            </div>
+          </details>
+
+          <!-- Project 3 -->
+          <details class="pcard p3">
+            <summary class="pcard__sum">
+              <div class="pcard__left">
+                <div class="pcard__title">NYC Taxi Price Prediction</div>
+                <div class="pcard__sub">Airflow DAGs • PySpark • Data modeling</div>
+              </div>
+
+              <div class="pcard__right">
+                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Repo</a>
+                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+                <span class="pcard__chev" aria-hidden="true">+</span>
+              </div>
+            </summary>
+
+            <div class="pcard__body">
+              <ul class="bullets">
+                <li>Prepared and transformed NYC taxi datasets with pipeline-style organization.</li>
+                <li>Focused on clean feature preparation and reproducible runs.</li>
+                <li>Tracked metrics to validate improvements and avoid leakage-prone splits.</li>
+              </ul>
+              <div class="tagrow">
+                <span>Python</span><span>PySpark</span><span>Airflow</span><span>ML</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn--small" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Open Repo</a>
+              </div>
+            </div>
+          </details>
+
+          <!-- Project 4 -->
+          <details class="pcard p4">
+            <summary class="pcard__sum">
+              <div class="pcard__left">
+                <div class="pcard__title">Stock Prediction using Snowflake + dbt</div>
+                <div class="pcard__sub">Snowflake • dbt • Analytics pipeline</div>
+              </div>
+
+              <div class="pcard__right">
+                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/Stock-Prediction-using-snowflake-dbt" target="_blank" rel="noopener">Repo</a>
+                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+                <span class="pcard__chev" aria-hidden="true">+</span>
+              </div>
+            </summary>
+
+            <div class="pcard__body">
+              <ul class="bullets">
+                <li>Built transformations with dbt to keep data logic versioned and reproducible.</li>
+                <li>Used Snowflake as the warehouse layer for curated datasets and analysis.</li>
+                <li>Organized the workflow as an end-to-end pipeline rather than isolated scripts.</li>
+              </ul>
+              <div class="tagrow">
+                <span>Snowflake</span><span>dbt</span><span>SQL</span><span>Python</span>
+              </div>
+              <div class="actions">
+                <a class="btn btn--small" href="https://github.com/Sanabada/Stock-Prediction-using-snowflake-dbt" target="_blank" rel="noopener">Open Repo</a>
+              </div>
+            </div>
+          </details>
         </div>
-      </details>
+      </div>
+    </section>
 
-      <!-- Project 3 -->
-      <details class="pcard p3">
-        <summary class="pcard__sum">
-          <div class="pcard__left">
-            <div class="pcard__title">NYC Taxi Price Prediction</div>
-            <div class="pcard__sub">Airflow DAGs • PySpark • Snowflake loads</div>
-          </div>
-
-          <div class="pcard__right">
-            <!-- REPLACE this href -->
-            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_TAXI" target="_blank" rel="noopener">Repo</a>
-
-            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-            <span class="pcard__chev" aria-hidden="true">+</span>
-          </div>
-        </summary>
-
-        <div class="pcard__body">
-          <ul class="bullets">
-            <li>Orchestrated pipelines with operational patterns (backfills, retries, checks).</li>
-            <li>Curated datasets loaded into Snowflake with incremental/idempotent design.</li>
-            <li>Designed for analytics + feature readiness.</li>
-          </ul>
-          <div class="tagrow">
-            <span>Airflow</span><span>PySpark</span><span>Snowflake</span><span>ETL</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn btn--small" href="REPLACE_REPO_TAXI" target="_blank" rel="noopener">Open Repo</a>
-          </div>
-        </div>
-      </details>
-
-      <!-- Project 4 -->
-      <details class="pcard p4">
-        <summary class="pcard__sum">
-          <div class="pcard__left">
-            <div class="pcard__title">Weather Data Ingestion Pipeline</div>
-            <div class="pcard__sub">Spark batch/stream • Kafka ingestion • REST API</div>
-          </div>
-
-          <div class="pcard__right">
-            <!-- REPLACE this href -->
-            <a class="pbtn pbtn--repo js-no-toggle" href="REPLACE_REPO_WEATHER" target="_blank" rel="noopener">Repo</a>
-
-            <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-            <span class="pcard__chev" aria-hidden="true">+</span>
-          </div>
-        </summary>
-
-        <div class="pcard__body">
-          <ul class="bullets">
-            <li>Built ingestion + transformation steps with consistency checks.</li>
-            <li>Time-series split discipline to avoid leakage.</li>
-            <li>MAE/RMSE tracking to evaluate improvements over time.</li>
-          </ul>
-          <div class="tagrow">
-            <span>Spark</span><span>Kafka</span><span>REST</span><span>HDFS</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn btn--small" href="REPLACE_REPO_WEATHER" target="_blank" rel="noopener">Open Repo</a>
-          </div>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-
-    <!-- EXPERIENCE (expandable; no "9 years" headline) -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container">
         <div class="section__head">
@@ -506,32 +499,30 @@
   </main>
 
   <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  // Stop clicks on buttons/links inside <summary> from toggling the <details>
-  document.querySelectorAll(".js-no-toggle").forEach(el => {
-    el.addEventListener("click", (e) => e.stopPropagation());
-  });
-
-  // Details button toggles the card open/closed
-  document.querySelectorAll(".js-toggle-details").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      const card = btn.closest("details");
-      card.open = !card.open;
-      // keep plus/minus synced
-      const chev = card.querySelector(".pcard__chev");
-      if (chev) chev.textContent = card.open ? "−" : "+";
+    // Prevent clicking Repo/Details from toggling <details>
+    document.querySelectorAll(".js-no-toggle").forEach(el => {
+      el.addEventListener("click", (e) => e.stopPropagation());
     });
-  });
 
-  // Keep plus/minus synced when user clicks elsewhere
-  document.querySelectorAll(".pcard").forEach(d => {
-    const chev = d.querySelector(".pcard__chev");
-    const set = () => { if (chev) chev.textContent = d.open ? "−" : "+"; };
-    set();
-    d.addEventListener("toggle", set);
-  });
-</script>
+    // "Details →" toggles open/close
+    document.querySelectorAll(".js-toggle-details").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest("details");
+        card.open = !card.open;
+        const chev = card.querySelector(".pcard__chev");
+        if (chev) chev.textContent = card.open ? "−" : "+";
+      });
+    });
 
+    // Keep +/− synced when user toggles by clicking elsewhere
+    document.querySelectorAll(".pcard").forEach(d => {
+      const chev = d.querySelector(".pcard__chev");
+      const set = () => { if (chev) chev.textContent = d.open ? "−" : "+"; };
+      set();
+      d.addEventListener("toggle", set);
+    });
+  </script>
 </body>
 </html>
