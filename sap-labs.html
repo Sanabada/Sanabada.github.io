@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAP Labs — Cloud-Native POC + Scale & Support on HANA Cloud | Abhinita Sanabada</title>
+  <meta name="description" content="One-page case study: improved scalability/diagnostics for an SAP HANA Cloud product; built Kyma/Kubernetes proof-of-concept; handled post-production hotfixes with Splunk/ServiceNow." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://sanabada.github.io/sap-labs.html" />
+
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1620; --text:#e8eef6; --muted:#a9b7c6;
+      --line:rgba(255,255,255,.10); --chip:rgba(255,255,255,.08);
+      --link:#7dd3fc; --shadow: 0 10px 30px rgba(0,0,0,.35); --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 15% -10%, rgba(167,139,250,.14), transparent 60%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(125,211,252,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px}
+    .nav{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(15,22,32,.70); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      position:sticky; top:14px; z-index:10;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:220px}
+    .badge{
+      width:34px; height:34px; border-radius:10px;
+      background: rgba(167,139,250,.15);
+      border:1px solid rgba(167,139,250,.25);
+      display:grid; place-items:center; font-weight:700;
+    }
+    .brand b{font-size:14px}
+    .brand span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
+    .navlinks{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      font-size:13px; color:var(--text);
+      padding:8px 10px; border-radius:999px; border:1px solid transparent;
+    }
+    .navlinks a:hover{border-color:var(--line); background:rgba(255,255,255,.03); text-decoration:none}
+    .hero{margin-top:22px}
+    .kicker{color:var(--muted); font-size:13px; letter-spacing:.02em}
+    h1{margin:10px 0 8px; font-size:34px; line-height:1.15}
+    .subtitle{color:var(--muted); font-size:15px; margin:0}
+    .grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; margin-top:18px}
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} .brand{min-width:auto} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(15,22,32,.72);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:16px 16px;
+    }
+    .card h2{font-size:16px; margin:0 0 10px}
+    .card p{margin:8px 0; color:var(--muted)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      font-size:12px; color:var(--text);
+      padding:6px 10px; border-radius:999px;
+      background: var(--chip); border:1px solid var(--line);
+    }
+    .section{margin-top:16px}
+    .section h2{font-size:16px; margin:0 0 10px}
+    .bullets{margin:0; padding-left:18px}
+    .bullets li{margin:8px 0; color:var(--muted)}
+    .bullets b{color:var(--text)}
+    .hr{height:1px; background:var(--line); margin:16px 0}
+    .small{font-size:12px; color:var(--muted)}
+    .footer{
+      margin-top:22px; padding-top:14px; border-top:1px solid var(--line);
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+      color:var(--muted); font-size:12px;
+    }
+    .footlinks{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      padding:7px 10px; border-radius:999px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03); color:var(--text); font-size:12px;
+    }
+    .pill:hover{text-decoration:none; border-color:rgba(167,139,250,.35)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="badge">AS</div>
+        <div>
+          <b>Abhinita Sanabada</b>
+          <span>Case study • SAP Labs</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="kicker">Software Development Engineer 2 • Apr 2019 – Oct 2021</div>
+      <h1>Cloud-Native POC + Scale & Support on HANA Cloud</h1>
+      <p class="subtitle">
+        Delivered features for a globally used HANA Cloud product and improved its scalability/diagnostics.
+        Built a Kyma/Kubernetes proof-of-concept to simplify cloud-native development and operations, and handled post-production hotfixes.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>What I shipped</h2>
+        <ul class="bullets">
+          <li><b>Product delivery:</b> engineered a solution for the auto industry (engineering task automation + shift scheduling), deployed globally on <b>AWS HANA Cloud</b>.</li>
+          <li><b>Scale + operability:</b> improved product scalability and enhanced diagnostics/upkeep so it was easier to run in production.</li>
+          <li><b>Cloud-native POC:</b> led a <b>Kyma</b> proof-of-concept using <b>Kubernetes + Docker</b> to simplify cloud-native app development and operational traceability.</li>
+          <li><b>Post-prod response:</b> rolled out hotfixes, ensured system health, and supported customers via <b>ServiceNow</b> and <b>Splunk</b>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Stack snapshot</h2>
+        <div class="chips">
+          <span class="chip">Kyma</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">GraphQL</span>
+          <span class="chip">HANA Cloud</span>
+          <span class="chip">Splunk</span>
+          <span class="chip">ServiceNow</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Public context (high-level)</h2>
+        <p>
+          Kyma is SAP’s Kubernetes-based runtime environment concept for cloud-native extensions and services.
+          This is why the POC was practical: it reduced operational friction and aligned with a managed K8s runtime model.
+        </p>
+
+        <p class="small">
+          Public reference: SAP Kyma environment overview.<br />
+          <a href="https://help.sap.com/docs/btp/sap-business-technology-platform/kyma-environment" target="_blank" rel="noopener">help.sap.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="section card">
+      <h2>Engineering decisions I’m proud of</h2>
+      <ul class="bullets">
+        <li><b>Operational-first engineering:</b> features are only “done” when they are observable and supportable.</li>
+        <li><b>Pragmatic Kubernetes adoption:</b> POC focused on deployability and traceability—not “K8s for K8s’ sake”.</li>
+        <li><b>Fast incident loops:</b> reduced detection → diagnosis → fix → verification time with Splunk + disciplined hotfix workflows.</li>
+      </ul>
+    </div>
+
+    <div class="section card">
+      <h2>What I can share publicly</h2>
+      <p>
+        This case study is intentionally public-safe: no customer data, no internal architecture diagrams, and no proprietary flows.
+        The focus is on engineering outcomes—scalability, diagnostics, cloud-native patterns, and production support discipline.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© Abhinita Sanabada • GitHub Pages</div>
+      <div class="footlinks">
+        <a class="pill" href="index.html#experience">← Back to Experience</a>
+        <a class="pill" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
