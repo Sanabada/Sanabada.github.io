@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>J.P. Morgan — Asset & Wealth App + Data Integrity | Abhinita Sanabada</title>
+  <meta name="description" content="One-page case study: built an asset/wealth web application with Spring Boot microservices; ensured data integrity/availability with Oracle+MongoDB; improved reliability via Sybase replication patterns." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://sanabada.github.io/jpmc.html" />
+
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1620; --text:#e8eef6; --muted:#a9b7c6;
+      --line:rgba(255,255,255,.10); --chip:rgba(255,255,255,.08);
+      --link:#7dd3fc; --shadow: 0 10px 30px rgba(0,0,0,.35); --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 18% -10%, rgba(34,197,94,.10), transparent 60%),
+                  radial-gradient(900px 600px at 85% 0%, rgba(125,211,252,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px}
+    .nav{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(15,22,32,.70); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      position:sticky; top:14px; z-index:10;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:220px}
+    .badge{
+      width:34px; height:34px; border-radius:10px;
+      background: rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.22);
+      display:grid; place-items:center; font-weight:700;
+    }
+    .brand b{font-size:14px}
+    .brand span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
+    .navlinks{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      font-size:13px; color:var(--text);
+      padding:8px 10px; border-radius:999px; border:1px solid transparent;
+    }
+    .navlinks a:hover{border-color:var(--line); background:rgba(255,255,255,.03); text-decoration:none}
+    .hero{margin-top:22px}
+    .kicker{color:var(--muted); font-size:13px; letter-spacing:.02em}
+    h1{margin:10px 0 8px; font-size:34px; line-height:1.15}
+    .subtitle{color:var(--muted); font-size:15px; margin:0}
+    .grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; margin-top:18px}
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} .brand{min-width:auto} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(15,22,32,.72);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:16px 16px;
+    }
+    .card h2{font-size:16px; margin:0 0 10px}
+    .card p{margin:8px 0; color:var(--muted)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      font-size:12px; color:var(--text);
+      padding:6px 10px; border-radius:999px;
+      background: var(--chip); border:1px solid var(--line);
+    }
+    .section{margin-top:16px}
+    .section h2{font-size:16px; margin:0 0 10px}
+    .bullets{margin:0; padding-left:18px}
+    .bullets li{margin:8px 0; color:var(--muted)}
+    .bullets b{color:var(--text)}
+    .hr{height:1px; background:var(--line); margin:16px 0}
+    .small{font-size:12px; color:var(--muted)}
+    .footer{
+      margin-top:22px; padding-top:14px; border-top:1px solid var(--line);
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+      color:var(--muted); font-size:12px;
+    }
+    .footlinks{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      padding:7px 10px; border-radius:999px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03); color:var(--text); font-size:12px;
+    }
+    .pill:hover{text-decoration:none; border-color:rgba(34,197,94,.28)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="badge">AS</div>
+        <div>
+          <b>Abhinita Sanabada</b>
+          <span>Case study • J.P. Morgan</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="kicker">Software Engineer • Jan 2017 – Apr 2019</div>
+      <h1>Asset & Wealth Web App + Data Integrity</h1>
+      <p class="subtitle">
+        Developed a web application supporting asset & wealth workflows. Focus areas:
+        microservices delivery with Spring Boot, strong data integrity/availability using Oracle + MongoDB,
+        and reliability improvements via data replication patterns.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>What I shipped</h2>
+        <ul class="bullets">
+          <li><b>Web application delivery:</b> built an application to enhance asset/wealth management by enabling precise, global data dissemination tailored to user needs.</li>
+          <li><b>Data integrity + availability:</b> used <b>Oracle</b> and <b>MongoDB</b> to keep critical operations robust and highly available.</li>
+          <li><b>Microservices execution:</b> delivered and supported features using <b>Spring Boot</b>, <b>REST APIs</b>, and <b>microservices</b> in Agile workflows.</li>
+          <li><b>Replication for reliability:</b> strategically replicated data from <b>Sybase</b> across databases to improve reliability and accessibility of financial records.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Stack snapshot</h2>
+        <div class="chips">
+          <span class="chip">Spring Boot</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Microservices</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Sybase replication patterns</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Public context (high-level)</h2>
+        <p>
+          In financial systems, correctness and availability are core requirements:
+          design choices often trade off latency, consistency guarantees, and operational simplicity.
+        </p>
+
+        <p class="small">
+          Public reference: J.P. Morgan Securities Services — data & analytics overview (high-level context).<br />
+          <a href="https://www.jpmorgan.com/securities-services/data-analytics" target="_blank" rel="noopener">jpmorgan.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="section card">
+      <h2>Engineering decisions I’m proud of</h2>
+      <ul class="bullets">
+        <li><b>Integrity-first thinking:</b> prioritized correctness and predictable behavior for critical workflows.</li>
+        <li><b>Supportable services:</b> designed APIs that were easier to test, operate, and evolve under real delivery pressure.</li>
+        <li><b>Replication used deliberately:</b> improved availability and access patterns while keeping a strong handle on consistency expectations.</li>
+      </ul>
+    </div>
+
+    <div class="section card">
+      <h2>What I can share publicly</h2>
+      <p>
+        This case study avoids internal schemas, business rules, and client-specific behavior.
+        I focus on broadly applicable engineering practices: service ownership, reliability patterns, and data integrity tradeoffs.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© Abhinita Sanabada • GitHub Pages</div>
+      <div class="footlinks">
+        <a class="pill" href="index.html#experience">← Back to Experience</a>
+        <a class="pill" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
