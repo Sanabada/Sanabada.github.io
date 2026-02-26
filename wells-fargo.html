@@ -130,12 +130,37 @@
       <div class="card">
         <h2>What I shipped</h2>
         <ul class="bullets">
-          <li><b>API engineering:</b> built FCM application APIs using <b>Spring MVC</b> (and scheduling via <b>Autosys</b>), emphasizing <b>unit testing</b>, logging, scalability, and maintainability.</li>
-          <li><b>Automation framework:</b> initiated and built a test framework for the FCM web app focusing on <b>unit + regression</b> using <b>Selenium + TestNG</b> to boost test speed and dependability.</li>
-          <li><b>Database work:</b> developed tailored <b>stored procedures</b> across modules to support reliable behavior.</li>
-          <li><b>Release ownership:</b> oversaw <b>monthly releases</b>, handled post-production issues, and supported customer queries to keep operational stability high.</li>
-          <li><b>Cloud readiness:</b> guided technical migration to <b>Azure</b> and used <b>dockerization</b> to improve scalability/performance and prepare for future enhancements.</li>
-        </ul>
+          <ul>
+            <li>
+              Built and owned Java/Spring services and REST APIs for the FCM (Futures Commission Merchant)
+              platform, enabling futures &amp; options workflows across trade capture &rarr; clearing/allocations
+              &rarr; positions/margin/risk; improved latency, correctness, and auditability via stronger
+              instrumentation and structured logging.
+            </li>
+          
+            <li>
+              Hardened EOD margin/risk/positions processing by automating and standardizing AutoSys job chains
+              on Linux/Unix (dependencies, retries, alerts, runbooks), reducing manual intervention and
+              improving run consistency for risk-sensitive back-office cycles.
+            </li>
+          
+            <li>
+              Built an agentic AI ops copilot (LLM + RAG) over runbooks + Splunk + ServiceNow + AutoSys
+              metadata to triage breaks and recommend next actions with human-in-the-loop approvals; reduced
+              incident investigation time and improved on-call handoffs.
+            </li>
+          
+            <li>
+              Optimized SQL stored procedures supporting core processing modules, delivering ~30% performance
+              improvement and improved edge-case correctness through query tuning and validation.
+            </li>
+          
+            <li>
+              Built/maintained Java/Spring microservices with reliability focus; created a Selenium + TestNG
+              automation framework reducing regression cycle time; supported cloud migration and
+              containerization (Azure/Docker) for scalability.
+            </li>
+          </ul> 
       </div>
 
       <div class="card">
