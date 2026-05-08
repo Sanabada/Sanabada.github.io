@@ -7,6 +7,143 @@
   <meta name="description" content="Internship portfolio for Abhinita Sanabada: SWE, Data, and AI/ML tracks with expandable sections, projects, and role-specific resumes." />
   <meta name="theme-color" content="#e5ddcf" />
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* Professional technical overrides layered on top of assets/style.css */
+    :root {
+      --ink: #0f172a;
+      --muted-ink: #475569;
+      --line: #d7dee8;
+      --panel: rgba(255, 255, 255, 0.92);
+      --panel-soft: #f8fafc;
+      --accent: #2563eb;
+      --accent-dark: #1e3a8a;
+      --code-bg: #eef2f7;
+    }
+
+    body {
+      color: var(--ink);
+      background: #f8fafc;
+    }
+
+    .bg,
+    .blob,
+    .sparkles {
+      display: none !important;
+    }
+
+    .topbar {
+      background: rgba(248, 250, 252, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand__mark {
+      border-radius: 8px;
+      background: var(--ink);
+      color: #ffffff;
+      box-shadow: none;
+    }
+
+    .brand__text,
+    .h1,
+    .h2,
+    .h3,
+    .pcard__title,
+    .acc__title,
+    .quick__k,
+    .mini__title {
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+
+    .avatarHero {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .card,
+    .pcard,
+    .acc,
+    .mini__card,
+    .quick {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+    }
+
+    .card--glass,
+    .card--soft,
+    .card--bright {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+    }
+
+    .chip,
+    .pill,
+    .tagrow span {
+      background: var(--code-bg) !important;
+      color: #1e293b !important;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.82rem;
+      box-shadow: none !important;
+    }
+
+    .quick {
+      border-radius: 16px;
+      background: #ffffff !important;
+    }
+
+    .quick__k {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+    }
+
+    .quick__v,
+    .muted,
+    .pcard__sub,
+    .acc__hint {
+      color: var(--muted-ink);
+    }
+
+    .btn,
+    .pbtn {
+      border-radius: 10px;
+      box-shadow: none;
+    }
+
+    .btn--primary,
+    .pbtn--repo {
+      background: var(--accent) !important;
+      border-color: var(--accent) !important;
+      color: #ffffff !important;
+    }
+
+    .pcard__sum,
+    .acc__summary {
+      border-bottom-color: var(--line);
+    }
+
+    .section--alt {
+      background: #f1f5f9;
+    }
+
+    code {
+      background: var(--code-bg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0.12rem 0.35rem;
+      color: var(--accent-dark);
+    }
+  </style>
 </head>
 
 <body>
@@ -45,13 +182,13 @@
           <img class="avatarHero" src="assets/profile.jpg" alt="Abhinita Sanabada" width="132" height="132" />
           <div class="heroCenter__name">Abhinita Sanabada</div>
           <div class="heroCenter__sub">
-            Data Science (Graduate) • Summer 2026 Internship • Full-time • Open to SWE / Data / AI-ML
+            Data Science (Graduate) • Seeking Internship & Full-time Roles • Full-stack / LLM / MCP / Computer Vision
           </div>
 
           <div class="chips heroCenter__chips">
-            <span class="chip chip--mint">Summer 2026 Internship</span>
+            <span class="chip chip--mint">Internship + Full-time</span>
             <span class="chip chip--sky">Sunnyvale / San Jose, CA</span>
-            <span class="chip chip--lav">Open to SWE • Data • AI/ML</span>
+            <span class="chip chip--lav">Full-stack • LLM • MCP • Computer Vision</span>
           </div>
         </div>
 
@@ -64,8 +201,10 @@
 
             <p class="lead">
               I enjoy bridging engineering and analytics—turning raw data into pipelines, APIs, and models that teams can trust.
-              I’m currently seeking <strong>Summer 2026 internship</strong> opportunities across
-              <strong>SWE</strong>, <strong>Data Engineering/Data Science</strong>, and <strong>AI/ML</strong>.
+              I’m currently seeking <strong>internship</strong> and <strong>full-time</strong> opportunities across
+              <strong>Full-stack Engineering</strong>, <strong>LLM/GenAI applications</strong>, <strong>MCP</strong>,
+              <strong>Computer Vision</strong>, <strong>Kafka/event-driven systems</strong>, <strong>MongoDB</strong>,
+              <strong>AWS</strong>, and related fields.
             </p>
 
             <div class="hero__cta">
@@ -90,30 +229,30 @@
               </div>
               <div class="mini__card c3">
                 <div class="mini__title">Focus</div>
-                <div class="mini__text">Internship-ready, role-specific storytelling</div>
+                <div class="mini__text">Internship + full-time opportunities</div>
               </div>
             </div>
           </div>
 
           <aside class="hero__right card card--glass">
-            <h2 class="h2">Quick access</h2>
+            <h2 class="h2">Open to opportunities</h2>
             <p class="muted">
-              Pick a track below to view details and download the matching resume.
+              I’m looking for <strong>internship</strong> and <strong>full-time</strong> roles where I can build reliable software, AI applications, and data-backed systems.
             </p>
 
             <div class="quickgrid">
-              <a class="quick quick--coral" href="#track-swe">
-                <div class="quick__k">SWE</div>
-                <div class="quick__v">Microservices • APIs • Cloud</div>
-              </a>
-              <a class="quick quick--aqua" href="#track-data">
-                <div class="quick__k">Data</div>
-                <div class="quick__v">Airflow • Spark • Kafka</div>
-              </a>
-              <a class="quick quick--violet" href="#track-ml">
-                <div class="quick__k">AI/ML</div>
-                <div class="quick__v">Modeling • Evaluation • Pipelines</div>
-              </a>
+              <div class="quick quick--coral">
+                <div class="quick__k">Full-stack</div>
+                <div class="quick__v">React • FastAPI • REST APIs</div>
+              </div>
+              <div class="quick quick--aqua">
+                <div class="quick__k">LLM / MCP</div>
+                <div class="quick__v">Agents • Tool use • GenAI apps</div>
+              </div>
+              <div class="quick quick--violet">
+                <div class="quick__k">AI + Systems</div>
+                <div class="quick__v">Computer Vision • Kafka • MongoDB • AWS</div>
+              </div>
             </div>
 
             <div class="divider"></div>
@@ -241,44 +380,103 @@
     <section id="projects" class="section section--alt">
       <div class="container">
         <div class="section__head">
-          <h2 class="h2">Projects</h2>
-          <p class="muted">Click “Details →” to expand.</p>
+          <h2 class="h2">Selected Engineering Projects</h2>
+          <p class="muted">Distributed systems, AI applications, retrieval pipelines, and production-oriented ML engineering.</p>
         </div>
 
         <div class="projgrid">
-          <details class="pcard p1">
+          <!-- PROJECT: LinkedIn Agentic Recruiting Simulation -->
+          <details class="pcard p1" open>
             <summary class="pcard__sum">
               <div class="pcard__left">
-                <div class="pcard__title">Real-Time SMS Spam Classification</div>
-                <div class="pcard__sub">Kafka pipeline • REST scoring • Containerized</div>
+                <div class="pcard__title">LinkedIn Agentic Recruiting Simulation</div>
+                <div class="pcard__sub">Distributed agent workflow • Kafka event bus • WebSocket telemetry • React/Next.js • FastAPI</div>
               </div>
               <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/kafka-sms-spam-pipeline" target="_blank" rel="noopener">Repo</a>
+                <a class="pbtn pbtn--repo js-no-toggle"
+                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
+                   target="_blank" rel="noopener">Repo</a>
                 <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
                 <span class="pcard__chev" aria-hidden="true">+</span>
               </div>
             </summary>
+
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Built a streaming ingestion workflow and near-real-time scoring path.</li>
-                <li>Emphasized evaluation discipline with precision, recall, and F1 while keeping the scoring path operationally clear.</li>
-                <li>Structured components for reproducibility and straightforward deployment.</li>
+                <li>Designed a LinkedIn-style recruiting simulation as a distributed agentic workflow with explicit stages for document ingestion, resume parsing, candidate-job matching, shortlist ranking, outreach generation, and human-in-the-loop approval.</li>
+                <li>Implemented Kafka-backed request/result topics to decouple orchestration, AI processing, status tracking, and persistence; added idempotent consumers, retry-aware failure handling, and event logs for workflow replay/debugging.</li>
+                <li>Built real-time progress streaming with WebSockets so the UI can surface stage-level execution state, partial results, and long-running agent workflow updates without blocking the request lifecycle.</li>
+                <li>Composed a polyglot full-stack system using React/Next.js, Node.js/Express, FastAPI, Kafka, MySQL, MongoDB, Redis, Docker, and AWS; benchmarked behavior using a seeded 10K-record recruiting dataset.</li>
               </ul>
+
               <div class="tagrow">
-                <span>Kafka</span><span>Python</span><span>REST</span><span>Docker</span>
+                <span>Agentic-AI</span>
+                <span>Kafka</span>
+                <span>WebSockets</span>
+                <span>FastAPI</span>
+                <span>Next.js</span>
+                <span>MongoDB</span>
+                <span>Redis</span>
+                <span>AWS</span>
               </div>
 
               <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada/kafka-sms-spam-pipeline" target="_blank" rel="noopener">Open Repo</a>
+                <a class="btn btn--small"
+                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
+                   target="_blank" rel="noopener">Open Repo</a>
               </div>
             </div>
           </details>
 
-          <details class="pcard p2">
+          <!-- PROJECT: Speech Emotion Recognition -->
+          <details class="pcard p2" open>
             <summary class="pcard__sum">
               <div class="pcard__left">
-                <div class="pcard__title">Healthcare Affordability Finder System</div>
-                <div class="pcard__sub">HDFS • Hadoop MR • PySpark • Regression • Semantic search</div>
+                <div class="pcard__title">Speech Emotion Recognition with Dialogue Context</div>
+                <div class="pcard__sub">Log-Mel CNN encoder • MFCC temporal features • BiLSTM + attention • class-imbalance handling</div>
+              </div>
+              <div class="pcard__right">
+                <a class="pbtn pbtn--repo js-no-toggle"
+                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
+                   target="_blank" rel="noopener">Repo</a>
+                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
+                <span class="pcard__chev" aria-hidden="true">+</span>
+              </div>
+            </summary>
+
+            <div class="pcard__body">
+              <ul class="bullets">
+                <li>Engineered a speech emotion-recognition pipeline combining Log-Mel spectrogram CNN embeddings, MFCC-derived temporal descriptors, dialogue-context encoding, BiLSTM sequence modeling, and attention-based utterance weighting.</li>
+                <li>Modeled conversational emotion transitions across dialogue turns rather than treating utterances as independent samples, improving alignment with real dialogue dynamics.</li>
+                <li>Trained on IEMOCAP and MELD with focal loss, label smoothing, audio augmentation, speaker normalization, and class-imbalance-aware evaluation to improve minority-class robustness.</li>
+                <li>Achieved 55.9% accuracy and 52.4% Macro-F1 on IEMOCAP, outperforming MFCC+MLP and transformer-from-scratch baselines while keeping the design lightweight for real-time inference targets.</li>
+              </ul>
+
+              <div class="tagrow">
+                <span>PyTorch</span>
+                <span>Speech-AI</span>
+                <span>CNN</span>
+                <span>MFCC</span>
+                <span>BiLSTM</span>
+                <span>Attention</span>
+                <span>IEMOCAP</span>
+                <span>MELD</span>
+              </div>
+
+              <div class="actions">
+                <a class="btn btn--small"
+                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
+                   target="_blank" rel="noopener">Open Repo</a>
+              </div>
+            </div>
+          </details>
+
+          <!-- PROJECT: Healthcare Affordability Finder System -->
+          <details class="pcard p3">
+            <summary class="pcard__sum">
+              <div class="pcard__left">
+                <div class="pcard__title">Healthcare Affordability Semantic Search</div>
+                <div class="pcard__sub">HDFS • MapReduce • Spark/PySpark • MiniLM embeddings • pricing retrieval</div>
               </div>
               <div class="pcard__right">
                 <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System" target="_blank" rel="noopener">Repo</a>
@@ -288,12 +486,12 @@
             </summary>
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Built an end-to-end semantic-search and retrieval pipeline over large CMS healthcare pricing data.</li>
-                <li>Used HDFS, MapReduce, Spark, and procedure-level data standardization to support scalable data processing.</li>
-                <li>Added semantic matching and regression experiments to improve search, affordability comparison, and pricing estimation.</li>
+                <li>Built an end-to-end retrieval pipeline over CMS healthcare pricing data using HDFS, MapReduce, Spark/PySpark, and procedure-level normalization for scalable preprocessing.</li>
+                <li>Generated MiniLM SentenceTransformer embeddings for standardized procedure descriptions to support natural-language procedure search over curated pricing records.</li>
+                <li>Combined semantic retrieval with Spark-based exploratory analysis and regression modeling to support affordability comparison, estimated cash-price lookup, and usability of large public healthcare datasets.</li>
               </ul>
               <div class="tagrow">
-                <span>HDFS</span><span>Hadoop</span><span>PySpark</span><span>Regression</span><span>Embeddings</span>
+                <span>HDFS</span><span>MapReduce</span><span>PySpark</span><span>MiniLM</span><span>Embeddings</span><span>Regression</span>
               </div>
 
               <div class="actions">
@@ -302,66 +500,12 @@
             </div>
           </details>
 
-          <details class="pcard p3">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">NYC Taxi Price Prediction</div>
-                <div class="pcard__sub">Airflow DAGs • PySpark • Data modeling</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Prepared and transformed NYC taxi datasets with pipeline-style organization.</li>
-                <li>Focused on clean feature preparation and reproducible runs.</li>
-                <li>Tracked metrics to validate improvements and avoid leakage-prone splits.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Python</span><span>PySpark</span><span>Airflow</span><span>ML</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
+          <!-- PROJECT: Meal Prep by MCP -->
           <details class="pcard p4">
             <summary class="pcard__sum">
               <div class="pcard__left">
-                <div class="pcard__title">Stock Prediction using Snowflake + dbt</div>
-                <div class="pcard__sub">Snowflake • dbt • Analytics pipeline</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/Stock-Prediction-using-snowflake-dbt" target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Built transformations with dbt to keep data logic versioned and reproducible.</li>
-                <li>Used Snowflake as the warehouse layer for curated datasets and analysis.</li>
-                <li>Organized the workflow as an end-to-end pipeline rather than isolated scripts.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Snowflake</span><span>dbt</span><span>SQL</span><span>Python</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada/Stock-Prediction-using-snowflake-dbt" target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Meal Prep by MCP -->
-          <details class="pcard p5">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Meal Prep by MCP (TheMealDB)</div>
-                <div class="pcard__sub">MCP Server • Claude Desktop Tools • TheMealDB API • STDIO</div>
+                <div class="pcard__title">Meal Prep by MCP</div>
+                <div class="pcard__sub">Model Context Protocol server • Claude Desktop tools • JSON-RPC • API integration</div>
               </div>
               <div class="pcard__right">
                 <a class="pbtn pbtn--repo js-no-toggle"
@@ -374,14 +518,14 @@
 
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Built a local MCP server named <strong>meals</strong>, exposing tools Claude can call from natural-language prompts.</li>
-                <li>Integrated TheMealDB endpoints to support search, filter by ingredient, details lookup, and random meal discovery.</li>
-                <li>Validated tool schemas and outputs using MCP Inspector; configured Claude Desktop via Connectors for end-to-end tool usage.</li>
-                <li>Implemented STDIO-safe logging through stderr and clean error handling for no matches and network/API failures.</li>
+                <li>Implemented a local MCP server exposing typed meal-discovery tools over STDIO so Claude Desktop can call external API capabilities from natural-language prompts.</li>
+                <li>Wrapped TheMealDB endpoints for ingredient filtering, meal search, details lookup, and random meal generation with structured JSON responses and predictable tool schemas.</li>
+                <li>Validated request/response contracts with MCP Inspector and separated stderr logging from STDIO protocol output to avoid JSON-RPC framing issues.</li>
+                <li>Added defensive error paths for empty result sets, malformed inputs, upstream API failures, and network exceptions to keep tool calls stable inside the LLM client.</li>
               </ul>
 
               <div class="tagrow">
-                <span>Python</span><span>MCP</span><span>Claude Desktop</span><span>TheMealDB</span><span>JSON-RPC</span>
+                <span>Python</span><span>MCP</span><span>Claude-Desktop</span><span>JSON-RPC</span><span>Tool-Calling</span><span>API</span>
               </div>
 
               <div class="actions">
@@ -392,11 +536,12 @@
             </div>
           </details>
 
-          <details class="pcard p6">
+          <!-- PROJECT: Yelp Prototype with Realtime Chatbot -->
+          <details class="pcard p5">
             <summary class="pcard__sum">
               <div class="pcard__left">
                 <div class="pcard__title">Yelp Prototype with Realtime Chatbot</div>
-                <div class="pcard__sub">FastAPI • React • MySQL • JWT • OpenAI • LangChain</div>
+                <div class="pcard__sub">FastAPI • React • MySQL • JWT auth • OpenAI/LangChain chatbot • owner/user workflows</div>
               </div>
               <div class="pcard__right">
                 <a class="pbtn pbtn--repo js-no-toggle"
@@ -409,10 +554,10 @@
 
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Built a full-stack Yelp-style web application with separate user and owner workflows using FastAPI, React, and MySQL.</li>
-                <li>Implemented secure JWT-based authentication for user login, owner signup/login, favorites, restaurant management, and protected routes.</li>
-                <li>Added a realtime-style chatbot experience using DineBot with OpenAI/LangChain-backed responses and a smart local fallback for restaurant suggestions.</li>
-                <li>Integrated restaurant search, favorites, owner dashboard, add restaurant flow, and AI-assisted restaurant discovery into a single working prototype.</li>
+                <li>Built a full-stack restaurant discovery prototype with separate customer and restaurant-owner workflows, using FastAPI service endpoints, React UI components, and MySQL persistence.</li>
+                <li>Implemented JWT-based authentication and protected routes for user login, owner signup/login, favorites, restaurant management, and dashboard operations.</li>
+                <li>Integrated an OpenAI/LangChain-backed chatbot flow with local fallback logic for restaurant suggestions, enabling AI-assisted discovery within the same application surface.</li>
+                <li>Designed application modules for search, favorites, owner CRUD operations, chatbot responses, and authenticated state management to support a cohesive prototype architecture.</li>
               </ul>
 
               <div class="tagrow">
@@ -432,94 +577,40 @@
             </div>
           </details>
 
-          <!-- PROJECT: LinkedIn Agentic Recruiting Simulation -->
-          <details class="pcard p7">
+          <!-- PROJECT: NYC Taxi Price Prediction -->
+          <details class="pcard p6">
             <summary class="pcard__sum">
               <div class="pcard__left">
-                <div class="pcard__title">LinkedIn Agentic Recruiting Simulation</div>
-                <div class="pcard__sub">Agentic AI • Kafka • WebSockets • React/Next.js • FastAPI</div>
+                <div class="pcard__title">NYC Taxi Price Prediction Pipeline</div>
+                <div class="pcard__sub">Airflow DAGs • PySpark transforms • feature engineering • reproducible ML workflow</div>
               </div>
               <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
-                   target="_blank" rel="noopener">Repo</a>
+                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Repo</a>
                 <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
                 <span class="pcard__chev" aria-hidden="true">+</span>
               </div>
             </summary>
-
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Built an agentic AI recruiting workflow that simulates LinkedIn-style hiring flows, including document parsing, candidate-job matching, shortlist generation, outreach drafting, and human-in-the-loop review.</li>
-                <li>Designed Kafka-based AI request/result pipelines with WebSocket progress updates, event logging, failure handling, and idempotent consumers for reliable multi-step execution.</li>
-                <li>Implemented the distributed application using React/Next.js, Node.js/Express, FastAPI, Kafka, MySQL, MongoDB, Redis, Docker, and AWS.</li>
-                <li>Benchmarked the workflow using a seeded 10K-record dataset to evaluate system behavior under realistic recruiting-style workloads.</li>
+                <li>Structured an ML-oriented data pipeline for NYC taxi fare prediction with Airflow orchestration and PySpark transformations.</li>
+                <li>Built reusable preprocessing stages for feature cleanup, trip-level transformations, and reproducible model-training inputs.</li>
+                <li>Tracked evaluation outputs to compare modeling iterations and reduce leakage-prone train/test split behavior.</li>
               </ul>
-
               <div class="tagrow">
-                <span>Agentic AI</span>
-                <span>Kafka</span>
-                <span>WebSockets</span>
-                <span>FastAPI</span>
-                <span>Next.js</span>
-                <span>AWS</span>
+                <span>Airflow</span><span>PySpark</span><span>Python</span><span>Feature-Engineering</span><span>ML-Pipeline</span>
               </div>
-
               <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
-                   target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Speech Emotion Recognition -->
-          <details class="pcard p8">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Speech Emotion Recognition with Dialogue Context</div>
-                <div class="pcard__sub">CNN • MFCC • BiLSTM • Attention • IEMOCAP/MELD</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
-                   target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Built a lightweight speech emotion-recognition model using Log-Mel spectrogram CNN features, MFCC-based temporal features, dialogue-context encoding, BiLSTM, and attention.</li>
-                <li>Modeled emotional transitions across conversations instead of treating each utterance as fully isolated.</li>
-                <li>Trained and evaluated on IEMOCAP and MELD using focal loss, label smoothing, data augmentation, and speaker normalization to handle class imbalance.</li>
-                <li>Achieved 55.9% accuracy and 52.4% Macro-F1 on IEMOCAP, outperforming MFCC+MLP and transformer-from-scratch baselines while targeting real-time inference.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>Python</span>
-                <span>Speech AI</span>
-                <span>CNN</span>
-                <span>BiLSTM</span>
-                <span>Attention</span>
-                <span>PyTorch</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
-                   target="_blank" rel="noopener">Open Repo</a>
+                <a class="btn btn--small" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Open Repo</a>
               </div>
             </div>
           </details>
 
           <!-- WRITING: Decision Trees Blog -->
-          <details class="pcard p9">
+          <details class="pcard p7">
             <summary class="pcard__sum">
               <div class="pcard__left">
-                <div class="pcard__title">Blog: Decision Trees Never Left</div>
-                <div class="pcard__sub">ML interpretability • Decision trees • Responsible AI • Technical writing</div>
+                <div class="pcard__title">Technical Blog: Decision Trees Never Left</div>
+                <div class="pcard__sub">ML interpretability • decision-tree induction • model transparency • responsible AI</div>
               </div>
               <div class="pcard__right">
                 <a class="pbtn pbtn--repo js-no-toggle"
@@ -532,18 +623,16 @@
 
             <div class="pcard__body">
               <ul class="bullets">
-                <li>Co-authored a technical blog post explaining why decision trees still matter in modern AI, especially for interpretability, auditability, and high-stakes decision-making.</li>
-                <li>Connected J. R. Quinlan’s classic ID3 decision-tree paper to current ML practice and responsible AI discussions.</li>
-                <li>Explained how decision trees create readable rule-based prediction paths and why that transparency remains valuable compared with black-box systems.</li>
-                <li>Highlighted practical use cases in tabular data, healthcare, finance, education, and business analytics where interpretable ML remains important.</li>
+                <li>Co-authored a technical article connecting Quinlan’s ID3-style decision-tree induction to modern ML interpretability and auditability requirements.</li>
+                <li>Explained how tree-based models expose feature splits, rule paths, and prediction logic that can be inspected by engineers, analysts, and domain stakeholders.</li>
+                <li>Positioned decision trees as a practical baseline and explainability tool for tabular ML problems in healthcare, finance, education, and business analytics.</li>
               </ul>
 
               <div class="tagrow">
-                <span>ML Writing</span>
-                <span>Decision Trees</span>
-                <span>Interpretability</span>
-                <span>Responsible AI</span>
-                <span>Technical Communication</span>
+                <span>ML-Interpretability</span>
+                <span>Decision-Trees</span>
+                <span>Responsible-AI</span>
+                <span>Technical-Writing</span>
               </div>
 
               <div class="actions">
