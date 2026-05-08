@@ -17,12 +17,15 @@
       --panel-soft: #f8fafc;
       --accent: #2563eb;
       --accent-dark: #1e3a8a;
+      --blue-soft: #eaf4ff;
+      --blue-panel: #f3f8ff;
+      --blue-line: #bfdbfe;
       --code-bg: #eef2f7;
     }
 
     body {
       color: var(--ink);
-      background: #f8fafc;
+      background: linear-gradient(180deg, #f3f8ff 0%, #f8fafc 38%, #ffffff 100%);
     }
 
     .bg,
@@ -32,16 +35,16 @@
     }
 
     .topbar {
-      background: rgba(248, 250, 252, 0.94);
-      border-bottom: 1px solid var(--line);
+      background: rgba(243, 248, 255, 0.95);
+      border-bottom: 1px solid var(--blue-line);
       backdrop-filter: blur(12px);
     }
 
     .brand__mark {
       border-radius: 8px;
-      background: var(--ink);
+      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
       color: #ffffff;
-      box-shadow: none;
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.20);
     }
 
     .brand__text,
@@ -57,13 +60,17 @@
     }
 
     .hero {
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      background:
+        radial-gradient(circle at top left, rgba(191, 219, 254, 0.55), transparent 34%),
+        linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--blue-line);
     }
 
     .avatarHero {
       border-radius: 18px;
-      border: 1px solid var(--line);
-      box-shadow: none;
+      border: 2px solid #ffffff;
+      outline: 1px solid var(--blue-line);
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.14);
     }
 
     .card,
@@ -71,8 +78,8 @@
     .acc,
     .mini__card,
     .quick {
-      background: var(--panel);
-      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, var(--blue-panel) 100%);
+      border: 1px solid var(--blue-line);
       box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
     }
 
@@ -87,7 +94,7 @@
     .chip,
     .pill,
     .tagrow span {
-      background: var(--code-bg) !important;
+      background: #eaf4ff !important;
       color: #1e293b !important;
       border: 1px solid var(--line);
       border-radius: 999px;
@@ -99,6 +106,7 @@
     .quick {
       border-radius: 16px;
       background: #ffffff !important;
+      border-left: 3px solid var(--accent);
     }
 
     .quick__k {
@@ -133,7 +141,7 @@
     }
 
     .section--alt {
-      background: #f1f5f9;
+      background: linear-gradient(180deg, #f1f7ff 0%, #f8fafc 100%);
     }
 
     code {
@@ -331,9 +339,9 @@
                 <div class="card card--soft">
                   <h3 class="h3">Resume (Data)</h3>
                   <p class="muted">
-                    Download <code>AbhinitaSanabada_DataEng_exp_resume.pdf</code>.
+                    Download <code>DataEng_exp_AbhinitaSanabada_resume.pdf</code>.
                   </p>
-                  <a class="btn btn--primary" href="AbhinitaSanabada_DataEng_exp_resume.pdf" target="_blank" rel="noopener" download>Download resume (Data)</a>
+                  <a class="btn btn--primary" href="assets/resumes/DataEng_exp_AbhinitaSanabada_resume.pdf" target="_blank" rel="noopener" download>Download resume (Data)</a>
                 </div>
               </div>
             </div>
@@ -361,11 +369,11 @@
                 </div>
 
                 <div class="card card--soft">
-                  <h3 class="h3">Resume (AI/ML)</h3>
+                  <h3 class="h3">Resume (Data Science / ML)</h3>
                   <p class="muted">
-                    Upload <code>resume_ml.pdf</code> to the repo root, in the same folder as <code>index.html</code>.
+                    Download <code>DataScience_AbhinitaSanabada_resume.pdf</code>.
                   </p>
-                  <a class="btn btn--primary" href="resume_ml.pdf" target="_blank" rel="noopener" download>Download resume (AI/ML)</a>
+                  <a class="btn btn--primary" href="assets/resumes/DataScience_AbhinitaSanabada_resume.pdf" target="_blank" rel="noopener" download>Download resume (Data Science / ML)</a>
                 </div>
               </div>
             </div>
@@ -604,44 +612,32 @@
               </div>
             </div>
           </details>
+        </div>
+      </div>
+    </section>
 
-          <!-- WRITING: Decision Trees Blog -->
-          <details class="pcard p7">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Technical Blog: Decision Trees Never Left</div>
-                <div class="pcard__sub">ML interpretability • decision-tree induction • model transparency • responsible AI</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://decisiontreesneverleft.blogspot.com/2026/04/decision-trees-never-left.html?m=1"
-                   target="_blank" rel="noopener">Blog</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
+    <!-- BLOG -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="h2">Technical Blog</h2>
+          <p class="muted">Writing on machine learning fundamentals, interpretability, and responsible AI engineering.</p>
+        </div>
 
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Co-authored a technical article connecting Quinlan’s ID3-style decision-tree induction to modern ML interpretability and auditability requirements.</li>
-                <li>Explained how tree-based models expose feature splits, rule paths, and prediction logic that can be inspected by engineers, analysts, and domain stakeholders.</li>
-                <li>Positioned decision trees as a practical baseline and explainability tool for tabular ML problems in healthcare, finance, education, and business analytics.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>ML-Interpretability</span>
-                <span>Decision-Trees</span>
-                <span>Responsible-AI</span>
-                <span>Technical-Writing</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://decisiontreesneverleft.blogspot.com/2026/04/decision-trees-never-left.html?m=1"
-                   target="_blank" rel="noopener">Read Blog</a>
-              </div>
-            </div>
-          </details>
+        <div class="card card--soft">
+          <h3 class="h3">Decision Trees Never Left</h3>
+          <p class="muted">
+            A technical article connecting decision-tree induction to modern ML interpretability, auditability, and practical model transparency for tabular AI systems.
+          </p>
+          <div class="tagrow">
+            <span>ML-Interpretability</span>
+            <span>Decision-Trees</span>
+            <span>Responsible-AI</span>
+            <span>Technical-Writing</span>
+          </div>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://decisiontreesneverleft.blogspot.com/2026/04/decision-trees-never-left.html?m=1" target="_blank" rel="noopener">Read Blog</a>
+          </div>
         </div>
       </div>
     </section>
