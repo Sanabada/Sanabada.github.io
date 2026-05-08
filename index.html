@@ -8,24 +8,29 @@
   <meta name="theme-color" content="#e5ddcf" />
   <link rel="stylesheet" href="assets/style.css" />
   <style>
-    /* Professional technical overrides layered on top of assets/style.css */
+    /* Professional technical theme layered on top of assets/style.css */
     :root {
       --ink: #0f172a;
-      --muted-ink: #475569;
-      --line: #d7dee8;
-      --panel: rgba(255, 255, 255, 0.92);
-      --panel-soft: #f8fafc;
+      --ink-2: #1e293b;
+      --muted-ink: #526175;
+      --line: #d8e1ee;
+      --line-strong: #b7c7dc;
+      --panel: rgba(255, 255, 255, 0.94);
+      --panel-soft: #f8fbff;
       --accent: #2563eb;
-      --accent-dark: #1e3a8a;
-      --blue-soft: #eaf4ff;
-      --blue-panel: #f3f8ff;
-      --blue-line: #bfdbfe;
-      --code-bg: #eef2f7;
+      --accent-2: #0891b2;
+      --accent-3: #7c3aed;
+      --accent-soft: #e8f2ff;
+      --cyan-soft: #e6fbff;
+      --code-bg: #eef4fb;
     }
 
     body {
       color: var(--ink);
-      background: linear-gradient(180deg, #f3f8ff 0%, #f8fafc 38%, #ffffff 100%);
+      background:
+        radial-gradient(circle at 12% 4%, rgba(37, 99, 235, 0.10), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(8, 145, 178, 0.10), transparent 30%),
+        linear-gradient(180deg, #f8fbff 0%, #f6f8fb 42%, #ffffff 100%);
     }
 
     .bg,
@@ -35,16 +40,16 @@
     }
 
     .topbar {
-      background: rgba(243, 248, 255, 0.95);
-      border-bottom: 1px solid var(--blue-line);
-      backdrop-filter: blur(12px);
+      background: rgba(248, 251, 255, 0.88);
+      border-bottom: 1px solid rgba(183, 199, 220, 0.72);
+      backdrop-filter: blur(14px);
     }
 
     .brand__mark {
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb 55%, #0891b2);
       color: #ffffff;
-      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.20);
+      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
     }
 
     .brand__text,
@@ -55,22 +60,46 @@
     .acc__title,
     .quick__k,
     .mini__title {
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
       color: var(--ink);
     }
 
     .hero {
+      position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(circle at top left, rgba(191, 219, 254, 0.55), transparent 34%),
-        linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
-      border-bottom: 1px solid var(--blue-line);
+        linear-gradient(135deg, rgba(232, 242, 255, 0.92), rgba(255, 255, 255, 0.96) 52%, rgba(230, 251, 255, 0.86)),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+      border-bottom: 1px solid rgba(183, 199, 220, 0.70);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .heroCenter {
+      padding-top: 0.5rem;
     }
 
     .avatarHero {
       border-radius: 18px;
-      border: 2px solid #ffffff;
-      outline: 1px solid var(--blue-line);
-      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.14);
+      border: 3px solid #ffffff;
+      outline: 1px solid rgba(37, 99, 235, 0.25);
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.13), 0 0 0 8px rgba(232, 242, 255, 0.85);
     }
 
     .card,
@@ -78,41 +107,55 @@
     .acc,
     .mini__card,
     .quick {
-      background: linear-gradient(180deg, #ffffff 0%, var(--blue-panel) 100%);
-      border: 1px solid var(--blue-line);
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 251, 255, 0.96) 100%);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.075);
     }
 
     .card--glass,
     .card--soft,
     .card--bright {
-      background: var(--panel);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 251, 255, 0.96) 100%);
       border: 1px solid var(--line);
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.075);
     }
 
-    .chip,
-    .pill,
-    .tagrow span {
-      background: #eaf4ff !important;
-      color: #1e293b !important;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.82rem;
-      box-shadow: none !important;
+    .hero__right.card {
+      border-top: 4px solid var(--accent);
+    }
+
+    .mini__card {
+      border-top: 3px solid rgba(8, 145, 178, 0.55);
     }
 
     .quick {
       border-radius: 16px;
       background: #ffffff !important;
-      border-left: 3px solid var(--accent);
+      border-left: 4px solid var(--accent);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .quick:nth-child(2) {
+      border-left-color: var(--accent-2);
+    }
+
+    .quick:nth-child(3) {
+      border-left-color: var(--accent-3);
+    }
+
+    .quick:hover,
+    .pcard:hover,
+    .acc:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 42px rgba(15, 23, 42, 0.10);
+      border-color: var(--line-strong);
     }
 
     .quick__k {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       font-size: 0.86rem;
       text-transform: uppercase;
+      color: var(--ink-2);
     }
 
     .quick__v,
@@ -122,17 +165,67 @@
       color: var(--muted-ink);
     }
 
+    .chip,
+    .pill,
+    .tagrow span {
+      background: linear-gradient(180deg, #f8fbff, #eef6ff) !important;
+      color: #1e293b !important;
+      border: 1px solid #cfe0f5;
+      border-radius: 999px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.82rem;
+      box-shadow: none !important;
+    }
+
+    .chip--mint,
+    .chip--sky,
+    .chip--lav {
+      background: linear-gradient(180deg, #f8fbff, #eef6ff) !important;
+    }
+
     .btn,
     .pbtn {
       border-radius: 10px;
       box-shadow: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .btn:hover,
+    .pbtn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.14);
     }
 
     .btn--primary,
     .pbtn--repo {
-      background: var(--accent) !important;
-      border-color: var(--accent) !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+      border-color: transparent !important;
       color: #ffffff !important;
+    }
+
+    .pbtn--ghost {
+      background: #ffffff !important;
+      border: 1px solid var(--line) !important;
+      color: var(--ink-2) !important;
+    }
+
+    .pcard {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pcard::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .pcard:nth-child(2)::before {
+      background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
     }
 
     .pcard__sum,
@@ -141,7 +234,9 @@
     }
 
     .section--alt {
-      background: linear-gradient(180deg, #f1f7ff 0%, #f8fafc 100%);
+      background:
+        radial-gradient(circle at 8% 18%, rgba(8, 145, 178, 0.06), transparent 24%),
+        linear-gradient(180deg, #f6f9fd 0%, #f8fbff 100%);
     }
 
     code {
@@ -149,7 +244,7 @@
       border: 1px solid var(--line);
       border-radius: 6px;
       padding: 0.12rem 0.35rem;
-      color: var(--accent-dark);
+      color: #1d4ed8;
     }
   </style>
 </head>
