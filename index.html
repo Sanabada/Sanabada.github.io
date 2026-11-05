@@ -1,925 +1,512 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhinita Sanabada | Internship Portfolio</title>
-  <meta name="description" content="Internship portfolio for Abhinita Sanabada: SWE, Data, and AI/ML tracks with expandable sections, projects, and role-specific resumes." />
-  <meta name="theme-color" content="#e5ddcf" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    /* Professional technical theme layered on top of assets/style.css */
-    :root {
-      --ink: #0f172a;
-      --ink-2: #1e293b;
-      --muted-ink: #526175;
-      --line: #d8e1ee;
-      --line-strong: #b7c7dc;
-      --panel: rgba(255, 255, 255, 0.94);
-      --panel-soft: #f8fbff;
-      --accent: #2563eb;
-      --accent-2: #0891b2;
-      --accent-3: #7c3aed;
-      --accent-soft: #e8f2ff;
-      --cyan-soft: #e6fbff;
-      --code-bg: #eef4fb;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhinita Sanabada | Software and AI Engineer</title>
+<meta name="description" content="Abhinita Sanabada: ten years building trading, risk, and wealth platforms at Wells Fargo, JPMorgan Chase, and SAP Labs. Now an M.S. Data Science candidate at SJSU building LLM agents, retrieval systems, and data pipelines.">
+<meta property="og:title" content="Abhinita Sanabada | Software and AI Engineer">
+<meta property="og:description" content="Ten years on production banking systems. Now building AI that holds up the same way.">
+<meta name="theme-color" content="#F2F4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F1;
+  --panel:#E6EAE5;
+  --ink:#17201E;
+  --muted:#56625E;
+  --line:#CDD4CF;
+  --cobalt:#1F4FE0;
+  --cobalt-ink:#173CB0;
+  --marker:#FFD43B;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--cobalt-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;z-index:10}
+.skip:focus{left:8px}
 
-    body {
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 12% 4%, rgba(37, 99, 235, 0.10), transparent 28%),
-        radial-gradient(circle at 88% 12%, rgba(8, 145, 178, 0.10), transparent 30%),
-        linear-gradient(180deg, #f8fbff 0%, #f6f8fb 42%, #ffffff 100%);
-    }
+/* header */
+header.top{position:sticky;top:0;z-index:5;background:rgba(242,244,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font:700 18px/1 var(--display);color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.top nav{display:flex;gap:22px;align-items:center}
+.top nav a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500}
+.top nav a:hover{color:var(--cobalt-ink)}
+.top nav a.btn-sm{background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:999px}
+.top nav a.btn-sm:hover{background:var(--cobalt)}
+@media (max-width:720px){.top nav a:not(.btn-sm){display:none}}
 
-    .bg,
-    .blob,
-    .sparkles {
-      display: none !important;
-    }
+/* hero */
+.hero{padding:88px 0 40px}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--muted);margin:0 0 28px}
+.status::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:#1E9E5A;box-shadow:0 0 0 4px rgba(30,158,90,.18)}
+.hero h1{font:800 clamp(44px,7.4vw,96px)/.98 var(--display);letter-spacing:-.035em;margin:0;max-width:13ch}
+.hero .lede{font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--ink);max-width:62ch;margin:30px 0 0}
+.hero .lede strong{font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--body);padding:15px 22px;border-radius:999px;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn.primary:hover{background:var(--cobalt-ink);border-color:var(--cobalt-ink)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
 
-    .topbar {
-      background: rgba(248, 251, 255, 0.88);
-      border-bottom: 1px solid rgba(183, 199, 220, 0.72);
-      backdrop-filter: blur(14px);
-    }
+/* career line */
+.career{padding:28px 0 80px}
+.career p.note{color:var(--muted);font-size:15px;margin:0 0 18px;max-width:60ch}
+.track-scroll{overflow-x:auto;padding-bottom:6px}
+.track{position:relative;min-width:980px;height:204px}
+.lane{position:absolute;left:0;right:0;height:42px;z-index:1}
+.lane.work{top:0}
+.lane.ai{top:50px}
+.lane.study{top:100px}
+.seg{position:absolute;top:0;height:100%;border-radius:8px;background:var(--ink);color:var(--paper);padding:7px 10px;overflow:hidden;transform-origin:left center;text-decoration:none;display:flex;flex-direction:column;justify-content:center}
+.seg b{font:700 14px/1.15 var(--display);white-space:nowrap}
+.seg span{font-size:12px;line-height:1.2;opacity:.75;white-space:nowrap}
+.seg.study{background:var(--panel);color:var(--ink);border:1.5px solid var(--ink)}
+.seg.ai{background:var(--cobalt);color:#fff}
+a.seg:hover{outline:2px solid var(--cobalt);outline-offset:2px}
+.axis{position:absolute;left:0;right:0;top:152px;height:24px;border-top:1px solid var(--line)}
+.tick{position:absolute;top:6px;font-size:12px;color:var(--muted);transform:translateX(-50%)}
+.now{position:absolute;top:-6px;bottom:28px;width:0;border-left:2px dashed var(--ink);z-index:0}
+.now i{position:absolute;bottom:-28px;left:-1px;transform:translateX(-50%);background:var(--marker);font-style:normal;font:600 12px/1 var(--body);padding:5px 8px;border-radius:4px;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+  .seg{animation:grow .7s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes grow{from{transform:scaleX(0);opacity:.2}to{transform:scaleX(1);opacity:1}}
+}
 
-    .brand__mark {
-      border-radius: 10px;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb 55%, #0891b2);
-      color: #ffffff;
-      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
-    }
+/* sections */
+section.block{padding:84px 0;border-top:1px solid var(--line)}
+.block h2{font:800 clamp(32px,4.4vw,52px)/1.02 var(--display);letter-spacing:-.025em;margin:0 0 14px}
+.block .intro{color:var(--muted);max-width:60ch;margin:0 0 48px}
 
-    .brand__text,
-    .h1,
-    .h2,
-    .h3,
-    .pcard__title,
-    .acc__title,
-    .quick__k,
-    .mini__title {
-      letter-spacing: -0.025em;
-      color: var(--ink);
-    }
+/* work */
+.case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;padding:40px 0;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:8px}
+.case h3{font:700 clamp(24px,2.6vw,30px)/1.1 var(--display);letter-spacing:-.015em;margin:0 0 12px}
+.case .tagline{color:var(--muted);margin:0 0 18px}
+.case .context{font-size:14px;font-weight:600;color:var(--cobalt-ink);margin:0 0 8px}
+.case figure{grid-column:1/-1;margin:4px 0 0}
+.case figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+.case figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.case .result{font:700 clamp(30px,3.4vw,42px)/1 var(--display);letter-spacing:-.02em;margin:22px 0 4px}
+.case .result-label{font-size:15px;color:var(--muted);margin:0}
+.case dl{margin:0;display:grid;gap:16px}
+.case dt{font-weight:600;font-size:15px}
+.case dd{margin:2px 0 0;color:var(--ink)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 0;padding:0;list-style:none}
+.stack li{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--panel);color:var(--ink)}
+.links{display:flex;gap:18px;margin-top:18px;font-weight:600;font-size:15px}
+@media (max-width:820px){.case{grid-template-columns:1fr;gap:12px}}
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(232, 242, 255, 0.92), rgba(255, 255, 255, 0.96) 52%, rgba(230, 251, 255, 0.86)),
-        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-      border-bottom: 1px solid rgba(183, 199, 220, 0.70);
-    }
+.more{margin-top:40px;background:var(--panel);border-radius:14px;padding:28px}
+.more h3{font:700 20px/1.2 var(--display);margin:0 0 14px}
+.more ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.more li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;align-items:baseline}
+.more li a{font-weight:600}
+.more li p{grid-column:1/-1;margin:0;color:var(--muted);font-size:15px}
+.more li small{color:var(--muted);font-size:13px}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.42;
-      background-image:
-        linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
-    }
+/* experience */
+.job{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;padding:30px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job .when{color:var(--muted);font-size:15px;padding-top:4px}
+.job h3{font:700 22px/1.2 var(--display);margin:0}
+.job .org{margin:2px 0 12px;color:var(--muted)}
+.job ul{margin:0;padding-left:18px;max-width:72ch}
+.job li{margin:0 0 6px}
+.job .cs{display:inline-block;margin-top:10px;font-weight:600;font-size:15px}
+.job.current h3::after{content:"Current";font:600 12px/1 var(--body);background:var(--cobalt);color:#fff;padding:4px 8px;border-radius:4px;margin-left:10px;vertical-align:4px}
+@media (max-width:720px){.job{grid-template-columns:1fr;gap:4px}}
 
-    .hero .container {
-      position: relative;
-      z-index: 1;
-    }
+/* skills & education */
+.two{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:56px}}
+.skills{display:grid;gap:18px;margin:0}
+.skills dt{font-weight:600}
+.skills dd{margin:2px 0 0;color:var(--muted)}
+.edu article{padding:0 0 22px;margin:0 0 22px;border-bottom:1px solid var(--line)}
+.edu article:last-child{border-bottom:0}
+.edu h3{font:700 20px/1.25 var(--display);margin:0}
+.edu p{margin:4px 0 0;color:var(--muted)}
+.edu h2,.skillcol h2{font-size:clamp(28px,3.2vw,38px);margin-bottom:28px}
 
-    .heroCenter {
-      padding-top: 0.5rem;
-    }
+/* resumes + contact */
+.resumes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:8px}
+.resumes a{display:block;border:1.5px solid var(--ink);border-radius:14px;padding:22px;text-decoration:none;color:var(--ink)}
+.resumes a:hover{background:var(--ink);color:var(--paper)}
+.resumes b{display:block;font:700 20px/1.2 var(--display);margin-bottom:6px}
+.resumes span{font-size:15px;opacity:.8}
+@media (max-width:760px){.resumes{grid-template-columns:1fr}}
 
-    .avatarHero {
-      border-radius: 18px;
-      border: 3px solid #ffffff;
-      outline: 1px solid rgba(37, 99, 235, 0.25);
-      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.13), 0 0 0 8px rgba(232, 242, 255, 0.85);
-    }
-
-    .card,
-    .pcard,
-    .acc,
-    .mini__card,
-    .quick {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 251, 255, 0.96) 100%);
-      border: 1px solid var(--line);
-      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.075);
-    }
-
-    .card--glass,
-    .card--soft,
-    .card--bright {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 251, 255, 0.96) 100%);
-      border: 1px solid var(--line);
-      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.075);
-    }
-
-    .hero__right.card {
-      border-top: 4px solid var(--accent);
-    }
-
-    .mini__card {
-      border-top: 3px solid rgba(8, 145, 178, 0.55);
-    }
-
-    .quick {
-      border-radius: 16px;
-      background: #ffffff !important;
-      border-left: 4px solid var(--accent);
-      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-    }
-
-    .quick:nth-child(2) {
-      border-left-color: var(--accent-2);
-    }
-
-    .quick:nth-child(3) {
-      border-left-color: var(--accent-3);
-    }
-
-    .quick:hover,
-    .pcard:hover,
-    .acc:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 42px rgba(15, 23, 42, 0.10);
-      border-color: var(--line-strong);
-    }
-
-    .quick__k {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.86rem;
-      text-transform: uppercase;
-      color: var(--ink-2);
-    }
-
-    .quick__v,
-    .muted,
-    .pcard__sub,
-    .acc__hint {
-      color: var(--muted-ink);
-    }
-
-    .chip,
-    .pill,
-    .tagrow span {
-      background: linear-gradient(180deg, #f8fbff, #eef6ff) !important;
-      color: #1e293b !important;
-      border: 1px solid #cfe0f5;
-      border-radius: 999px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.82rem;
-      box-shadow: none !important;
-    }
-
-    .chip--mint,
-    .chip--sky,
-    .chip--lav {
-      background: linear-gradient(180deg, #f8fbff, #eef6ff) !important;
-    }
-
-    .btn,
-    .pbtn {
-      border-radius: 10px;
-      box-shadow: none;
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
-    }
-
-    .btn:hover,
-    .pbtn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.14);
-    }
-
-    .btn--primary,
-    .pbtn--repo {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
-      border-color: transparent !important;
-      color: #ffffff !important;
-    }
-
-    .pbtn--ghost {
-      background: #ffffff !important;
-      border: 1px solid var(--line) !important;
-      color: var(--ink-2) !important;
-    }
-
-    .pcard {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pcard::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    }
-
-    .pcard:nth-child(2)::before {
-      background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
-    }
-
-    .pcard__sum,
-    .acc__summary {
-      border-bottom-color: var(--line);
-    }
-
-    .section--alt {
-      background:
-        radial-gradient(circle at 8% 18%, rgba(8, 145, 178, 0.06), transparent 24%),
-        linear-gradient(180deg, #f6f9fd 0%, #f8fbff 100%);
-    }
-
-    code {
-      background: var(--code-bg);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 0.12rem 0.35rem;
-      color: #1d4ed8;
-    }
-  </style>
+.contact{background:var(--ink);color:var(--paper);padding:96px 0 40px;margin-top:0}
+.contact h2{font:800 clamp(38px,6vw,76px)/1 var(--display);letter-spacing:-.03em;margin:0;max-width:16ch}
+.contact p{color:#BFC8C4;max-width:56ch;margin:22px 0 0}
+.contact .mail{display:inline-block;margin-top:34px;font:700 clamp(22px,3.2vw,36px)/1.1 var(--display);color:#fff;text-decoration-color:var(--marker);text-decoration-thickness:3px;text-underline-offset:8px;word-break:break-word}
+.contact .mail:hover{color:var(--marker)}
+.contact .social{display:flex;flex-wrap:wrap;gap:24px;margin-top:40px}
+.contact .social a{color:#fff;font-weight:600}
+.contact footer{margin-top:72px;padding-top:22px;border-top:1px solid #34403D;color:#8E9A96;font-size:14px}
+</style>
 </head>
-
 <body>
-  <!-- Decorative background -->
-  <div class="bg" aria-hidden="true">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="sparkles"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main">Abhinita Sanabada</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a class="btn-sm" href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark">AS</span>
-        <span class="brand__text">Abhinita Sanabada</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#tracks">Tracks</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="nav__cta">Contact</a>
-      </nav>
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <p class="status">Open to full-time roles from May 2027. Based in the San Francisco Bay Area.</p>
+      <h1>I build software that has to be right.</h1>
+      <p class="lede">For ten years I built and supported trading, risk, and wealth platforms at <strong>Wells Fargo, JPMorgan Chase, and SAP Labs</strong>, where a wrong number costs real money. Now I'm an M.S. Data Science candidate at San José State and an AI engineering intern, building LLM agents, retrieval systems, and data pipelines with the same production habits.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:abhinita.sanabada@gmail.com">Email me</a>
+        <a class="btn ghost" href="#work">See my work</a>
+        <a class="btn ghost" href="assets/resumes/AbhinitaSanabada_FullTime_Resume.pdf">Download resume</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-
-        <!-- Centered hero header (LinkedIn-like profile photo size) -->
-        <div class="heroCenter">
-          <img class="avatarHero" src="assets/profile.jpg" alt="Abhinita Sanabada" width="132" height="132" />
-          <div class="heroCenter__name">Abhinita Sanabada</div>
-          <div class="heroCenter__sub">
-            M.S. Data Science Candidate • Building Full-stack, LLM/MCP, Kafka, MongoDB & AWS Systems
-          </div>
-
-          <div class="chips heroCenter__chips">
-            <span class="chip chip--mint">Internship + Full-time</span>
-            <span class="chip chip--sky">Sunnyvale / San Jose, CA</span>
-            <span class="chip chip--lav">Full-stack • LLM • MCP • Computer Vision</span>
-          </div>
-        </div>
-
-        <div class="hero__grid">
-          <div class="hero__left">
-            <h1 class="h1">
-              Hi, I’m Abhinita.<br/>
-              I build data products that are clean, reliable, and easy to operate.
-            </h1>
-
-            <p class="lead">
-              I enjoy bridging engineering and analytics—turning raw data into pipelines, APIs, and models that teams can trust.
-              I’m currently seeking <strong>internship</strong> and <strong>full-time</strong> opportunities across
-              <strong>Full-stack Engineering</strong>, <strong>LLM/GenAI applications</strong>, <strong>MCP</strong>,
-              <strong>Computer Vision</strong>, <strong>Kafka/event-driven systems</strong>, <strong>MongoDB</strong>,
-              <strong>AWS</strong>, and related fields.
-            </p>
-
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#tracks">Choose a track</a>
-              <a class="btn" href="assets/resumes/AbhinitaSanabada_FullTime_Resume.pdf"
-                 target="_blank" rel="noopener" download>
-                Download full-time resume
-              </a>
-
-              <a class="btn" href="https://github.com/Sanabada" target="_blank" rel="noopener">GitHub</a>
-              <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-
-            <div class="mini">
-              <div class="mini__card c1">
-                <div class="mini__title">Strength</div>
-                <div class="mini__text">Building reliable pipelines + services</div>
-              </div>
-              <div class="mini__card c2">
-                <div class="mini__title">Style</div>
-                <div class="mini__text">Clean, reproducible, measurable systems</div>
-              </div>
-              <div class="mini__card c3">
-                <div class="mini__title">Focus</div>
-                <div class="mini__text">Internship + full-time opportunities</div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="hero__right card card--glass">
-            <h2 class="h2">Open to opportunities</h2>
-            <p class="muted">
-              I’m looking for <strong>internship</strong> and <strong>full-time</strong> roles where I can build reliable software, AI applications, and data-backed systems.
-            </p>
-
-            <div class="quickgrid">
-              <div class="quick quick--coral">
-                <div class="quick__k">Full-stack</div>
-                <div class="quick__v">React • FastAPI • REST APIs</div>
-              </div>
-              <div class="quick quick--aqua">
-                <div class="quick__k">LLM / MCP</div>
-                <div class="quick__v">Agents • Tool use • GenAI apps</div>
-              </div>
-              <div class="quick quick--violet">
-                <div class="quick__k">AI + Systems</div>
-                <div class="quick__v">Computer Vision • Kafka • MongoDB • AWS</div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="contactline">
-              <span class="dot"></span>
-              <span class="muted">Email:</span>
-              <a href="mailto:abhinita.sanabada@sjsu.edu">abhinita.sanabada@sjsu.edu</a>
-            </div>
-          </aside>
-        </div>
+  <section class="career" aria-labelledby="career-h">
+    <div class="wrap">
+      <h2 id="career-h" class="sr-only" style="position:absolute;left:-9999px">Career timeline</h2>
+      <p class="note">Twelve years at a glance: production engineering on top, AI work and graduate study below. Select any bar to jump to that role.</p>
+      <div class="track-scroll">
+        <div class="track" id="track" aria-label="Career timeline from 2014 to 2027: Capgemini 2014 to 2016, JPMorgan Chase 2017 to 2019, SAP Labs 2019 to 2021, Wells Fargo 2021 to 2024, San José State M.S. Data Science 2025 to 2027, AI engineering internship from June 2026."></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- TRACKS -->
-    <section id="tracks" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Choose a track</h2>
+  <section class="block" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <h2 id="work-h">Selected work</h2>
+      <p class="intro">Projects from my master's program and the HP Edge AI hackathon at SJSU, each built end to end. Code for all of them is on GitHub.</p>
+
+      <article class="case">
+        <div>
+          <p class="context">HP Edge AI hackathon, SJSU, 2026</p>
+          <h3>EdgeSupport: on-site IT triage</h3>
+          <p class="tagline">An IT help-desk assistant that diagnoses laptop problems on a local HP ZGX Nano, so private logs never leave the building.</p>
+          <p class="result">95% accuracy</p>
+          <p class="result-label">on a 20-ticket synthetic test set, against 75% for a rules-only baseline, with zero PII leaked</p>
         </div>
-
-        <div class="accordions">
-          <!-- SWE TRACK -->
-          <details class="acc" id="track-swe">
-            <summary class="acc__summary s1">
-              <span class="acc__title">Software Engineering (SWE)</span>
-              <span class="acc__hint">Microservices • REST APIs • Cloud • Automation</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-
-            <!-- SWE intern -->
-            <div class="acc__body">
-              <div class="trackgrid">
-                <div class="card">
-                  <h3 class="h3">SWE</h3>
-                  <p class="muted">
-                    I build robust backend services and agentic AI applications with clean interfaces, reliable APIs, and scalable integration patterns. I’m comfortable taking features from design to implementation, including backend logic, database connectivity, intelligent workflows, and deployment-ready systems.
-                  </p>
-                  <div class="pillrow">
-                    <span class="pill">Java/Spring</span><span class="pill">REST</span><span class="pill">CI/CD</span><span class="pill">Docker</span><span class="pill">Azure/AWS</span>
-                  </div>
-                </div>
-
-                <div class="card card--soft">
-                  <h3 class="h3">Resume (SWE)</h3>
-                  <p class="muted">
-                    Download <code>AbhinitaSanabada_SWE_Resume_Feb26.pdf</code>.
-                  </p>
-                  <a class="btn btn--primary" href="AbhinitaSanabada_SWE_Resume_Feb26.pdf" target="_blank" rel="noopener" download>Download resume (SWE)</a>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- DATA TRACK -->
-          <details class="acc" id="track-data">
-            <summary class="acc__summary s2">
-              <span class="acc__title">Data Science / Data Engineering</span>
-              <span class="acc__hint">ETL • Orchestration • Streaming • Warehousing</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-
-            <div class="acc__body">
-              <div class="trackgrid">
-                <div class="card">
-                  <h3 class="h3">Data</h3>
-                  <p class="muted">
-                    I design dependable batch + streaming pipelines with clear observability and repeatability:
-                    clean data models, validation, and idempotent loads.
-                  </p>
-                  <div class="pillrow">
-                    <span class="pill">Airflow</span><span class="pill">Spark/PySpark</span><span class="pill">Kafka</span><span class="pill">Snowflake</span><span class="pill">SQL</span>
-                  </div>
-                </div>
-
-                <div class="card card--soft">
-                  <h3 class="h3">Resume (Data)</h3>
-                  <p class="muted">
-                    Download <code>DataEng_exp_AbhinitaSanabada_resume.pdf</code>.
-                  </p>
-                  <a class="btn btn--primary" href="assets/resumes/DataEng_exp_AbhinitaSanabada_resume.pdf" target="_blank" rel="noopener" download>Download resume (Data)</a>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <!-- AI/ML TRACK -->
-          <details class="acc" id="track-ml">
-            <summary class="acc__summary s3">
-              <span class="acc__title">AI / ML Engineering</span>
-              <span class="acc__hint">Modeling • Evaluation • Feature pipelines</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-
-            <div class="acc__body">
-              <div class="trackgrid">
-                <div class="card">
-                  <h3 class="h3">AI/ML</h3>
-                  <p class="muted">
-                    I treat ML as an engineering discipline: reproducible training/evaluation, leakage-safe splits,
-                    and deployment-friendly pipelines—not just notebooks.
-                  </p>
-                  <div class="pillrow">
-                    <span class="pill">scikit-learn</span><span class="pill">PyTorch</span><span class="pill">Metrics</span><span class="pill">Pandas</span><span class="pill">Experiment hygiene</span>
-                  </div>
-                </div>
-
-                <div class="card card--soft">
-                  <h3 class="h3">Resume (Data Science / ML)</h3>
-                  <p class="muted">
-                    Download <code>DataScience_AbhinitaSanabada_resume.pdf</code>.
-                  </p>
-                  <a class="btn btn--primary" href="assets/resumes/DataScience_AbhinitaSanabada_resume.pdf" target="_blank" rel="noopener" download>Download resume (Data Science / ML)</a>
-                </div>
-              </div>
-            </div>
-          </details>
+        <div>
+          <dl>
+            <div><dt>What I built</dt><dd>I built the original privacy and telemetry pipeline, then led the integration of my teammates' backend and laptop collectors (11 of the team's 16 commits). A local Qwen2.5-7B model answers each ticket three to five times. The ticket stays on site only if the answers agree and cite real evidence. Otherwise it escalates to a person with a reason code.</dd></div>
+            <div><dt>The hard part</dt><dd>Teaching the system when not to answer. Thresholds are tuned on a calibration set and locked before testing. 107 automated tests pass on the Nano, and short LoRA fine-tuning runs completed on its GPU.</dd></div>
+          </dl>
+          <ul class="stack" aria-label="Tech stack"><li>HP ZGX Nano (NVIDIA GB10)</li><li>Qwen2.5-7B</li><li>vLLM</li><li>FastAPI</li><li>Streamlit</li><li>LoRA</li><li>Docker</li></ul>
+          <div class="links"><a href="#edge-demo">Watch the demo</a><a href="https://github.com/abhinitasanabada-web/edgehack">View code</a></div>
         </div>
+        <figure id="edge-demo">
+          <video controls preload="none" playsinline width="1440" height="900" poster="assets/video/edgesupport-poster.jpg" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#0E1117;display:block">
+            <source src="assets/video/edgesupport-demo.mp4" type="video/mp4">
+            <a href="assets/video/edgesupport-demo.mp4">Download the EdgeSupport demo video</a>
+          </video>
+          <figcaption>2.5-minute demo: a "websites won't load" ticket diagnosed on the Nano, with the model served locally by vLLM on the GB10 GPU.</figcaption>
+        </figure>
+      </article>
 
-        <div class="note"></div>
+      <article class="case">
+        <div>
+          <h3>Agentic recruiting simulation</h3>
+          <p class="tagline">A LinkedIn-style hiring workflow where AI agents do the busywork and a person approves every step that matters.</p>
+          <p class="result">10K records</p>
+          <p class="result-label">used to benchmark the full pipeline</p>
+        </div>
+        <div>
+          <dl>
+            <div><dt>What I built</dt><dd>A distributed agent workflow on Kafka, with live progress streamed to the browser over WebSockets, event logging, and failure handling at each stage.</dd></div>
+            <div><dt>Why it matters</dt><dd>Agents that act on people's careers need a human checkpoint. Approval gates are part of the workflow itself, not something added afterward.</dd></div>
+          </dl>
+          <ul class="stack" aria-label="Tech stack"><li>Kafka</li><li>FastAPI</li><li>Node.js</li><li>React / Next.js</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Docker</li><li>AWS</li></ul>
+          <div class="links"><a href="https://github.com/Sanabada/Linkedin-Agentic-Simulation">View code</a></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div>
+          <h3>NYC taxi data pipeline in Docker</h3>
+          <p class="tagline">A batch and real-time data pipeline that runs in Docker, from raw public trip files to a Snowflake warehouse.</p>
+        </div>
+        <div>
+          <dl>
+            <div><dt>What I built</dt><dd>Two Airflow DAGs running in Docker. One finds the latest monthly NYC trip file, cleans it with PySpark, and loads it into Snowflake. The other pulls live New York weather from the OpenWeather API every hour.</dd></div>
+            <div><dt>The hard part</dt><dd>Safe reruns. Loads go through a staging table and a MERGE so rerunning never duplicates trips, and every Snowflake step runs in a transaction that rolls back on failure.</dd></div>
+          </dl>
+          <ul class="stack" aria-label="Tech stack"><li>Docker</li><li>Airflow</li><li>PySpark</li><li>Snowflake</li><li>PostgreSQL</li><li>OpenWeather API</li></ul>
+          <div class="links"><a href="https://github.com/abhinitasanabada-web/nyc-taxi-data-prediction-pyspark">View code</a><a href="https://github.com/abhinitasanabada-web/nyc-taxi-data-prediction-pyspark/tree/main/screenshots">See it running</a></div>
+        </div>
+        <figure>
+          <img src="assets/img/nyc-airflow-run.png" width="1400" height="509" loading="lazy" alt="Airflow graph view of the nyc_taxi_pyspark_etl DAG with all three tasks, ensure_objects, extract_transform_with_pyspark and load_cleaned_to_snowflake, marked success.">
+          <figcaption>A successful Airflow run: create the tables, clean the trips with PySpark, load them into Snowflake.</figcaption>
+        </figure>
+      </article>
+
+      <article class="case">
+        <div>
+          <h3>Healthcare affordability search</h3>
+          <p class="tagline">Ask in plain English what a procedure costs, and compare prices across providers.</p>
+          <p class="result">13.6M rows</p>
+          <p class="result-label">of raw CMS pricing data reduced to about 47K clean procedure records</p>
+        </div>
+        <div>
+          <dl>
+            <div><dt>What I built</dt><dd>A Spark pipeline that cleans about 4 GB of messy public pricing files, plus semantic search over the results using MiniLM embeddings and regression models to estimate prices.</dd></div>
+            <div><dt>The hard part</dt><dd>Inconsistent codes and missing values across providers. Most of the work was making the data trustworthy before any model touched it.</dd></div>
+          </dl>
+          <ul class="stack" aria-label="Tech stack"><li>PySpark</li><li>Spark ML</li><li>HDFS</li><li>Sentence embeddings</li></ul>
+          <div class="links"><a href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System">View code</a></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div>
+          <h3>Speech emotion recognition</h3>
+          <p class="tagline">Reading emotion from voice, using the surrounding conversation for context.</p>
+          <p class="result">52.4% Macro-F1</p>
+          <p class="result-label">and 55.9% accuracy on IEMOCAP, ahead of MLP and transformer baselines</p>
+        </div>
+        <div>
+          <dl>
+            <div><dt>What I built</dt><dd>A CNN, BiLSTM, and attention model over Log-Mel spectrogram and MFCC features, trained on IEMOCAP and MELD.</dd></div>
+            <div><dt>The hard part</dt><dd>Emotion classes are badly imbalanced. Focal loss, augmentation, and per-speaker normalization kept the model from just predicting "neutral".</dd></div>
+          </dl>
+          <ul class="stack" aria-label="Tech stack"><li>PyTorch</li><li>CNN</li><li>BiLSTM</li><li>Attention</li><li>Signal processing</li></ul>
+          <div class="links"><a href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition">View code</a></div>
+        </div>
+      </article>
+
+      <div class="more">
+        <h3>More projects and writing</h3>
+        <ul>
+          <li><a href="https://github.com/Sanabada/yelp-prototype-with-AI-chatbot">Yelp prototype with AI chatbot</a><small>FastAPI, React, MySQL, LangChain</small><p>Customer and owner workflows with JWT auth and a real-time OpenAI chatbot.</p></li>
+          <li><a href="https://github.com/Sanabada/mealPrepByMCP">Meal prep by MCP</a><small>Python, MCP, JSON-RPC</small><p>A Model Context Protocol server that lets Claude Desktop search recipes and plan meals with real data.</p></li>
+          <li><a href="https://decisiontreesneverleft.blogspot.com/2026/04/decision-trees-never-left.html?m=1">Decision trees never left</a><small>Blog post</small><p>Why decision-tree induction still matters for interpretable, auditable ML.</p></li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Selected Engineering Projects</h2>
-          <p class="muted">Distributed systems, AI applications, retrieval pipelines, and production-oriented ML engineering.</p>
+  <section class="block" id="experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <h2 id="exp-h">Experience</h2>
+      <p class="intro">Backend and data engineering on systems that run every business day, plus support when something breaks.</p>
+
+      <article class="job current" id="job-ai">
+        <p class="when">Jun 2026 to present</p>
+        <div>
+          <h3>AI Engineer Intern</h3>
+          <p class="org">Healthcare startup</p>
+          <ul>
+            <li>Build ingestion, preprocessing, and feature-extraction modules for patient and clinical-document data.</li>
+            <li>Add guardrails with NVIDIA NeMo Guardrails so automated workflows produce structured, controlled, auditable output.</li>
+            <li>Own deployed workflows end to end, from bug report to fix, on a small and fast-moving team.</li>
+          </ul>
         </div>
+      </article>
 
-        <div class="projgrid">
-          <!-- PROJECT: LinkedIn Agentic Recruiting Simulation -->
-          <details class="pcard p1" open>
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">LinkedIn Agentic Recruiting Simulation</div>
-                <div class="pcard__sub">Distributed agent workflow • Kafka event bus • WebSocket telemetry • React/Next.js • FastAPI</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
-                   target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Designed a LinkedIn-style recruiting simulation as a distributed agentic workflow with explicit stages for document ingestion, resume parsing, candidate-job matching, shortlist ranking, outreach generation, and human-in-the-loop approval.</li>
-                <li>Implemented Kafka-backed request/result topics to decouple orchestration, AI processing, status tracking, and persistence; added idempotent consumers, retry-aware failure handling, and event logs for workflow replay/debugging.</li>
-                <li>Built real-time progress streaming with WebSockets so the UI can surface stage-level execution state, partial results, and long-running agent workflow updates without blocking the request lifecycle.</li>
-                <li>Composed a polyglot full-stack system using React/Next.js, Node.js/Express, FastAPI, Kafka, MySQL, MongoDB, Redis, Docker, and AWS; benchmarked behavior using a seeded 10K-record recruiting dataset.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>Agentic-AI</span>
-                <span>Kafka</span>
-                <span>WebSockets</span>
-                <span>FastAPI</span>
-                <span>Next.js</span>
-                <span>MongoDB</span>
-                <span>Redis</span>
-                <span>AWS</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/Linkedin-Agentic-Simulation.git"
-                   target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Speech Emotion Recognition -->
-          <details class="pcard p2" open>
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Speech Emotion Recognition with Dialogue Context</div>
-                <div class="pcard__sub">Log-Mel CNN encoder • MFCC temporal features • BiLSTM + attention • class-imbalance handling</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
-                   target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Engineered a speech emotion-recognition pipeline combining Log-Mel spectrogram CNN embeddings, MFCC-derived temporal descriptors, dialogue-context encoding, BiLSTM sequence modeling, and attention-based utterance weighting.</li>
-                <li>Modeled conversational emotion transitions across dialogue turns rather than treating utterances as independent samples, improving alignment with real dialogue dynamics.</li>
-                <li>Trained on IEMOCAP and MELD with focal loss, label smoothing, audio augmentation, speaker normalization, and class-imbalance-aware evaluation to improve minority-class robustness.</li>
-                <li>Achieved 55.9% accuracy and 52.4% Macro-F1 on IEMOCAP, outperforming MFCC+MLP and transformer-from-scratch baselines while keeping the design lightweight for real-time inference targets.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>PyTorch</span>
-                <span>Speech-AI</span>
-                <span>CNN</span>
-                <span>MFCC</span>
-                <span>BiLSTM</span>
-                <span>Attention</span>
-                <span>IEMOCAP</span>
-                <span>MELD</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/Real-time-Speech-Emotion-Recognition.git"
-                   target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Healthcare Affordability Finder System -->
-          <details class="pcard p3">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Healthcare Affordability Semantic Search</div>
-                <div class="pcard__sub">HDFS • MapReduce • Spark/PySpark • MiniLM embeddings • pricing retrieval</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System" target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Built an end-to-end retrieval pipeline over CMS healthcare pricing data using HDFS, MapReduce, Spark/PySpark, and procedure-level normalization for scalable preprocessing.</li>
-                <li>Generated MiniLM SentenceTransformer embeddings for standardized procedure descriptions to support natural-language procedure search over curated pricing records.</li>
-                <li>Combined semantic retrieval with Spark-based exploratory analysis and regression modeling to support affordability comparison, estimated cash-price lookup, and usability of large public healthcare datasets.</li>
-              </ul>
-              <div class="tagrow">
-                <span>HDFS</span><span>MapReduce</span><span>PySpark</span><span>MiniLM</span><span>Embeddings</span><span>Regression</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada/Healthcare-Affordability-Finder-System" target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Meal Prep by MCP -->
-          <details class="pcard p4">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Meal Prep by MCP</div>
-                <div class="pcard__sub">Model Context Protocol server • Claude Desktop tools • JSON-RPC • API integration</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/mealPrepByMCP"
-                   target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Implemented a local MCP server exposing typed meal-discovery tools over STDIO so Claude Desktop can call external API capabilities from natural-language prompts.</li>
-                <li>Wrapped TheMealDB endpoints for ingredient filtering, meal search, details lookup, and random meal generation with structured JSON responses and predictable tool schemas.</li>
-                <li>Validated request/response contracts with MCP Inspector and separated stderr logging from STDIO protocol output to avoid JSON-RPC framing issues.</li>
-                <li>Added defensive error paths for empty result sets, malformed inputs, upstream API failures, and network exceptions to keep tool calls stable inside the LLM client.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>Python</span><span>MCP</span><span>Claude-Desktop</span><span>JSON-RPC</span><span>Tool-Calling</span><span>API</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/mealPrepByMCP"
-                   target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: Yelp Prototype with Realtime Chatbot -->
-          <details class="pcard p5">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">Yelp Prototype with Realtime Chatbot</div>
-                <div class="pcard__sub">FastAPI • React • MySQL • JWT auth • OpenAI/LangChain chatbot • owner/user workflows</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle"
-                   href="https://github.com/Sanabada/yelp-prototype-with-AI-chatbot.git"
-                   target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Built a full-stack restaurant discovery prototype with separate customer and restaurant-owner workflows, using FastAPI service endpoints, React UI components, and MySQL persistence.</li>
-                <li>Implemented JWT-based authentication and protected routes for user login, owner signup/login, favorites, restaurant management, and dashboard operations.</li>
-                <li>Integrated an OpenAI/LangChain-backed chatbot flow with local fallback logic for restaurant suggestions, enabling AI-assisted discovery within the same application surface.</li>
-                <li>Designed application modules for search, favorites, owner CRUD operations, chatbot responses, and authenticated state management to support a cohesive prototype architecture.</li>
-              </ul>
-
-              <div class="tagrow">
-                <span>FastAPI</span>
-                <span>React</span>
-                <span>MySQL</span>
-                <span>JWT</span>
-                <span>OpenAI</span>
-                <span>LangChain</span>
-              </div>
-
-              <div class="actions">
-                <a class="btn btn--small"
-                   href="https://github.com/Sanabada/yelp-prototype-with-AI-chatbot.git"
-                   target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
-
-          <!-- PROJECT: NYC Taxi Price Prediction -->
-          <details class="pcard p6">
-            <summary class="pcard__sum">
-              <div class="pcard__left">
-                <div class="pcard__title">NYC Taxi Price Prediction Pipeline</div>
-                <div class="pcard__sub">Airflow DAGs • PySpark transforms • feature engineering • reproducible ML workflow</div>
-              </div>
-              <div class="pcard__right">
-                <a class="pbtn pbtn--repo js-no-toggle" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Repo</a>
-                <button class="pbtn pbtn--ghost js-no-toggle js-toggle-details" type="button">Details →</button>
-                <span class="pcard__chev" aria-hidden="true">+</span>
-              </div>
-            </summary>
-            <div class="pcard__body">
-              <ul class="bullets">
-                <li>Structured an ML-oriented data pipeline for NYC taxi fare prediction with Airflow orchestration and PySpark transformations.</li>
-                <li>Built reusable preprocessing stages for feature cleanup, trip-level transformations, and reproducible model-training inputs.</li>
-                <li>Tracked evaluation outputs to compare modeling iterations and reduce leakage-prone train/test split behavior.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Airflow</span><span>PySpark</span><span>Python</span><span>Feature-Engineering</span><span>ML-Pipeline</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="https://github.com/Sanabada/NYC_taxi_Price_Prediction" target="_blank" rel="noopener">Open Repo</a>
-              </div>
-            </div>
-          </details>
+      <article class="job" id="job-wf">
+        <p class="when">Nov 2021 to Jan 2024</p>
+        <div>
+          <h3>Senior Software Engineer</h3>
+          <p class="org">Wells Fargo</p>
+          <ul>
+            <li>Built Java/Spring services for futures and options, covering trade capture, clearing, positions, margin, and risk.</li>
+            <li>Tuned SQL stored procedures in core processing modules for about 30% better performance.</li>
+            <li>Standardized end-of-day AutoSys job chains with retries, alerts, and runbooks, reducing manual intervention.</li>
+            <li>Prototyped an LLM and RAG ops copilot over runbooks, Splunk, and ServiceNow to help triage breaks, with human approval.</li>
+            <li>Built a Selenium/TestNG regression framework and containerized services for the Azure migration.</li>
+          </ul>
+          <a class="cs" href="wells-fargo.html">Read the Wells Fargo case study</a>
         </div>
+      </article>
+
+      <article class="job" id="job-sap">
+        <p class="when">Apr 2019 to Oct 2021</p>
+        <div>
+          <h3>Software Development Engineer 2</h3>
+          <p class="org">SAP Labs</p>
+          <ul>
+            <li>Delivered an automotive orchestration solution on SAP HANA Cloud that automated engineering tasks and shift scheduling.</li>
+            <li>Owned post-release reliability: monitoring, incident investigation in Splunk, ServiceNow tracking, and hotfixes.</li>
+            <li>Led a Kubernetes/Kyma proof of concept to improve diagnostics and deployment visibility.</li>
+          </ul>
+          <a class="cs" href="sap-labs.html">Read the SAP Labs case study</a>
+        </div>
+      </article>
+
+      <article class="job" id="job-jpmc">
+        <p class="when">Jan 2017 to Apr 2019</p>
+        <div>
+          <h3>Software Engineer</h3>
+          <p class="org">JPMorgan Chase &amp; Co.</p>
+          <ul>
+            <li>Built ingestion services and Airflow plus Spark ETL for asset and wealth management.</li>
+            <li>Added data-quality checks and audit-friendly logging for sensitive transactions.</li>
+          </ul>
+          <a class="cs" href="jpmc.html">Read the JPMorgan Chase case study</a>
+        </div>
+      </article>
+
+      <article class="job" id="job-cap">
+        <p class="when">Apr 2014 to Aug 2016</p>
+        <div>
+          <h3>Software Engineer</h3>
+          <p class="org">Capgemini</p>
+          <ul>
+            <li>Built a multi-database abstraction layer in Core Java and banking reports with JasperReports and Oracle SQL.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="wrap two">
+      <div class="skillcol">
+        <h2>Skills</h2>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>Python, SQL, Java, JavaScript, TypeScript</dd></div>
+          <div><dt>LLM and GenAI</dt><dd>MCP, LangChain, LangGraph, RAG, embeddings, tool calling, guardrails, human-in-the-loop design</dd></div>
+          <div><dt>Backend and full stack</dt><dd>FastAPI, Spring Boot, Node.js, React, Next.js, REST, WebSockets</dd></div>
+          <div><dt>Data and streaming</dt><dd>Kafka, Spark, PySpark, Airflow, HDFS, Snowflake, ETL</dd></div>
+          <div><dt>Machine learning</dt><dd>PyTorch, scikit-learn, CNNs, BiLSTMs, attention, model evaluation</dd></div>
+          <div><dt>Cloud and operations</dt><dd>AWS, Azure, Docker, Kubernetes, CI/CD, Linux, AutoSys, Splunk, ServiceNow</dd></div>
+          <div><dt>Databases</dt><dd>PostgreSQL, MySQL, Oracle, MongoDB, Redis</dd></div>
+        </dl>
       </div>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Technical Blog</h2>
-          <p class="muted">Writing on machine learning fundamentals, interpretability, and responsible AI engineering.</p>
-        </div>
-
-        <div class="card card--soft">
-          <h3 class="h3">Decision Trees Never Left</h3>
-          <p class="muted">
-            A technical article connecting decision-tree induction to modern ML interpretability, auditability, and practical model transparency for tabular AI systems.
-          </p>
-          <div class="tagrow">
-            <span>ML-Interpretability</span>
-            <span>Decision-Trees</span>
-            <span>Responsible-AI</span>
-            <span>Technical-Writing</span>
-          </div>
-          <div class="actions">
-            <a class="btn btn--primary" href="https://decisiontreesneverleft.blogspot.com/2026/04/decision-trees-never-left.html?m=1" target="_blank" rel="noopener">Read Blog</a>
-          </div>
-        </div>
+      <div class="edu">
+        <h2>Education</h2>
+        <article>
+          <h3>M.S. Data Science</h3>
+          <p>San José State University, expected May 2027</p>
+          <p>Machine learning, deep learning, distributed systems, cloud computing</p>
+        </article>
+        <article>
+          <h3>B.Tech. Electronics and Communication Engineering</h3>
+          <p>Biju Patnaik University of Technology, 2012</p>
+        </article>
+        <article>
+          <h3>Certifications</h3>
+          <p>AWS Fundamentals, Microsoft Azure Fundamentals, Machine Learning (Andrew Ng)</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Experience</h2>
-        </div>
-
-        <div class="accordions">
-          <details class="acc">
-            <summary class="acc__summary s4">
-              <span class="acc__title">Wells Fargo — Senior Software Engineer</span>
-              <span class="acc__hint">Microservices • Automation • Cloud migration</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-            <div class="acc__body">
-              <ul class="bullets">
-                <li>Built and maintained Java/Spring microservices and REST APIs with a strong reliability focus.</li>
-                <li>Created Selenium + TestNG automation framework reducing regression cycle time.</li>
-                <li>Supported cloud migration and containerization with Azure and Docker for scalability.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Java/Spring</span><span>REST</span><span>Azure</span><span>Docker</span><span>Jenkins</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="wells-fargo.html">Case study →</a>
-              </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc__summary s5">
-              <span class="acc__title">SAP Labs — Software Development Engineer 2</span>
-              <span class="acc__hint">Kubernetes POC • Ops tooling</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-            <div class="acc__body">
-              <ul class="bullets">
-                <li>Delivered features on SAP HANA Cloud product used by global clients.</li>
-                <li>Built Kyma/Kubernetes POC to simplify runtime operations and improve traceability.</li>
-                <li>Supported post-production hotfix workflows using Splunk and ServiceNow.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Spring Boot</span><span>Kubernetes</span><span>HANA Cloud</span><span>Splunk</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="sap-labs.html">Case study →</a>
-              </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc__summary s6">
-              <span class="acc__title">J.P. Morgan Chase — Software Engineer</span>
-              <span class="acc__hint">ETL • Analytics feeding systems • Data quality</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-            <div class="acc__body">
-              <ul class="bullets">
-                <li>Built ingestion and data services supporting analytics and dashboards.</li>
-                <li>Automated ETL pipelines with Airflow + Spark and quality checks.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Python</span><span>SQL</span><span>Airflow</span><span>Spark</span>
-              </div>
-              <div class="actions">
-                <a class="btn btn--small" href="jpmc.html">Case study →</a>
-              </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc__summary s7">
-              <span class="acc__title">Capgemini — Software Engineer</span>
-              <span class="acc__hint">Core Java • DB abstraction • Reporting</span>
-              <span class="acc__chev" aria-hidden="true">▾</span>
-            </summary>
-            <div class="acc__body">
-              <ul class="bullets">
-                <li>Built multi-database abstraction logic in Core Java for portability and performance.</li>
-                <li>Delivered reporting solutions using JasperReports and Oracle SQL.</li>
-              </ul>
-              <div class="tagrow">
-                <span>Core Java</span><span>Oracle SQL</span><span>Reporting</span>
-              </div>
-            </div>
-          </details>
-        </div>
+  <section class="block" id="resume" aria-labelledby="res-h">
+    <div class="wrap">
+      <h2 id="res-h">Resumes</h2>
+      <p class="intro">Choose the version that fits the role you're hiring for.</p>
+      <div class="resumes">
+        <a href="AbhinitaSanabada_SWE_Resume_Feb26.pdf"><b>Software engineering</b><span>Backend services, APIs, agentic apps</span></a>
+        <a href="assets/resumes/DataEng_exp_AbhinitaSanabada_resume.pdf"><b>Data engineering</b><span>Batch and streaming pipelines</span></a>
+        <a href="assets/resumes/DataScience_AbhinitaSanabada_resume.pdf"><b>AI and ML</b><span>Modeling, evaluation, LLM systems</span></a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Skills</h2>
-        </div>
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Hiring for backend, data, or AI engineering?</h2>
+    <p>I'm looking for full-time roles starting May 2027 and I'm open to relocating. Email is the fastest way to reach me.</p>
+    <a class="mail" href="mailto:abhinita.sanabada@gmail.com">abhinita.sanabada@gmail.com</a>
+    <div class="social">
+      <a href="https://linkedin.com/in/abhinita-sanabada">LinkedIn</a>
+      <a href="https://github.com/Sanabada">GitHub</a>
+      <a href="https://github.com/abhinitasanabada-web">GitHub (school projects)</a>
+      <a href="assets/resumes/AbhinitaSanabada_FullTime_Resume.pdf">Resume (PDF)</a>
+    </div>
+    <footer>© 2026 Abhinita Sanabada</footer>
+  </div>
+</section>
 
-        <div class="skillgrid">
-          <div class="card k1">
-            <h3 class="h3">Languages</h3>
-            <p class="muted">Python • SQL • Java • JavaScript/TypeScript</p>
-          </div>
-          <div class="card k2">
-            <h3 class="h3">Full-stack / Backend</h3>
-            <p class="muted">React/Next.js • FastAPI • Node.js/Express • Spring Boot • REST APIs • WebSockets</p>
-          </div>
-          <div class="card k3">
-            <h3 class="h3">LLM / GenAI / Agents</h3>
-            <p class="muted">MCP • LangChain • LangGraph • RAG • Embeddings • Tool calling • Human-in-the-loop workflows</p>
-          </div>
-          <div class="card k4">
-            <h3 class="h3">Data / Distributed Systems</h3>
-            <p class="muted">Kafka • Spark/PySpark • Airflow • HDFS • MapReduce • ETL • Event-driven pipelines</p>
-          </div>
-          <div class="card k5">
-            <h3 class="h3">ML / Speech / Computer Vision</h3>
-            <p class="muted">PyTorch • scikit-learn • CNNs • BiLSTM • Attention • NLP • Model evaluation • Metrics</p>
-          </div>
-          <div class="card k6">
-            <h3 class="h3">Cloud / DevOps</h3>
-            <p class="muted">AWS • Azure • Docker • Kubernetes/Kyma • CI/CD • Linux/Unix • Splunk</p>
-          </div>
-          <div class="card k7">
-            <h3 class="h3">Databases / Caching</h3>
-            <p class="muted">MongoDB • MySQL • PostgreSQL • Oracle • Redis • Snowflake</p>
-          </div>
-          <div class="card k8">
-            <h3 class="h3">Analytics / Visualization</h3>
-            <p class="muted">Tableau • Power BI • Pandas • NumPy • matplotlib • Error analysis</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="card card--bright">
-          <div class="contactgrid">
-            <div>
-              <h2 class="h2">Contact</h2>
-              <p class="muted">For internship or full-time roles, please email or connect through LinkedIn.</p>
-            </div>
-            <div class="contactbtns">
-              <a class="btn btn--primary" href="mailto:abhinita.sanabada@sjsu.edu">Email (SJSU)</a>
-              <a class="btn" href="mailto:abhinita.sanabada@gmail.com">Email (Gmail)</a>
-              <a class="btn" href="https://linkedin.com/in/abhinita-sanabada" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-
-        <footer class="footer">
-          <span class="tiny muted">© <span id="y"></span> Abhinita Sanabada • GitHub Pages</span>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Prevent clicking Repo/Blog/Details from toggling <details>
-    document.querySelectorAll(".js-no-toggle").forEach(el => {
-      el.addEventListener("click", (e) => e.stopPropagation());
+<script>
+(function(){
+  // Career timeline, positioned by date
+  var start = 2014.0, end = 2027.6;
+  var pct = function(y){ return ((y - start) / (end - start) * 100).toFixed(3) + '%'; };
+  var span = function(a,b){ return ((b - a) / (end - start) * 100).toFixed(3) + '%'; };
+  var lanes = {
+    work: [
+      {from:2014.25,to:2016.6,name:'Capgemini',sub:'Software Engineer',href:'#job-cap'},
+      {from:2017.0,to:2019.3,name:'JPMorgan Chase',sub:'Software Engineer',href:'#job-jpmc'},
+      {from:2019.3,to:2021.8,name:'SAP Labs',sub:'SDE 2',href:'#job-sap'},
+      {from:2021.85,to:2024.05,name:'Wells Fargo',sub:'Senior SWE',href:'#job-wf'}
+    ],
+    ai: [
+      {from:2026.42,to:2027.6,name:'AI Engineer',sub:'Intern',href:'#job-ai',cls:'ai'}
+    ],
+    study: [
+      {from:2025.0,to:2027.4,name:'M.S. Data Science',sub:'San José State',href:'#skills',cls:'study'}
+    ]
+  };
+  var track = document.getElementById('track');
+  var i = 0;
+  Object.keys(lanes).forEach(function(k){
+    var lane = document.createElement('div');
+    lane.className = 'lane ' + k;
+    lanes[k].forEach(function(s){
+      var a = document.createElement('a');
+      a.className = 'seg' + (s.cls ? ' ' + s.cls : '');
+      a.href = s.href;
+      a.style.left = pct(s.from);
+      a.style.width = span(s.from, s.to);
+      a.style.animationDelay = (i++ * 90) + 'ms';
+      a.innerHTML = '<b>' + s.name + '</b><span>' + s.sub + '</span>';
+      lane.appendChild(a);
     });
+    track.appendChild(lane);
+  });
+  var axis = document.createElement('div');
+  axis.className = 'axis';
+  for (var y = 2014; y <= 2027; y++){
+    var t = document.createElement('span');
+    t.className = 'tick'; t.style.left = pct(y); t.textContent = y;
+    if (y === 2014) t.style.transform = 'none';
+    axis.appendChild(t);
+  }
+  track.appendChild(axis);
+  var d = new Date(), now = d.getFullYear() + d.getMonth() / 12;
+  if (now > start && now < end){
+    var n = document.createElement('div');
+    n.className = 'now'; n.style.left = pct(now);
+    n.innerHTML = '<i>Today</i>';
+    track.appendChild(n);
+  }
 
-    // "Details →" toggles open/close
-    document.querySelectorAll(".js-toggle-details").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest("details");
-        card.open = !card.open;
-        const chev = card.querySelector(".pcard__chev");
-        if (chev) chev.textContent = card.open ? "−" : "+";
-      });
-    });
+  // On narrow screens, start the timeline at the most recent years
+  var sc = track.parentElement; sc.scrollLeft = sc.scrollWidth;
 
-    // Keep +/− synced when user toggles by clicking elsewhere
-    document.querySelectorAll(".pcard").forEach(d => {
-      const chev = d.querySelector(".pcard__chev");
-      const set = () => { if (chev) chev.textContent = d.open ? "−" : "+"; };
-      set();
-      d.addEventListener("toggle", set);
-    });
-  </script>
+  // Header border on scroll
+  var h = document.getElementById('top');
+  var onScroll = function(){ h.classList.toggle('scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
 </body>
 </html>
